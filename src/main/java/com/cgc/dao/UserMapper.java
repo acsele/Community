@@ -10,4 +10,9 @@ public interface UserMapper {
 
     User selectUserByName(String name);
 
+    User selectUserByEmail(String email);
+
+    Integer insertUser(User user);
+
+    Integer updateStatus(Integer status, Integer id);
 }

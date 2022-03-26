@@ -1,6 +1,7 @@
 package com.cgc.mapper;
 
 import com.cgc.dao.UserMapper;
+import com.cgc.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,5 +19,9 @@ public class UserMapperTest {
     @Test
     public void selectUserByNameTest() {
         System.out.println(userMapper.selectUserByName("bbb"));
+    }
+    @Test
+    public void insertTest(){
+        System.out.println(userMapper.insertUser(new User()));
     }
 }

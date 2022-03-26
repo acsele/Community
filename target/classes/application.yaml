@@ -15,18 +15,27 @@ spring:
       maximum-pool-size: 15
       minimum-idle: 5
       idle-timeout: 30000
-#  mail:
-#    host: smtp.qq.com
-#    port: 465
-#    username: ENC(2a34EAfYxma1BXFO4dZRCP3SdTUyz7+qyKmZ7QEKJrA=)
-#    password: ENC(qaB+zE7L5VObM1hK1YtcBMT1+brMcY0w8FeBpU/PiZo=)
-##    protocol: smtps
-#    properties:
-#      mail:
-#        smtp:
-#          auth: true
-#          ssl:
-#            enable: true
+  mail:
+    host: smtp.sina.com # 使用新浪的smtp服务
+    port: 465
+    username: xingchen066@sina.com
+    password: af5f4cb51a7e6e83
+    protocol: smtps # 使用加密协议
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true  # 发送邮件时使用ssl安全连接
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.cgc.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+
+
 #  # redis
 #  redis:
 #    database: 11
@@ -51,20 +60,13 @@ spring:
 #  encryptor:
 #    password: test
 
-# 配置sql打印日志
+# 配置日志级别
 logging:
+  file: E:/IDEAWorkPlace/Log/community.log
   level:
-    com.tassel.mapper:
+    com.cgc.mapper:
       debug
 
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.tassel.entity
-  configuration:
-    map-underscore-to-camel-case: true
-    use-generated-keys: true
-#
-#community:
-#  path:
-#    domain: http://localhost:8023
-#    upload: E:\Documents\Projects\Community\upload
+community:
+  path:
+    domain: http://localhost:8080
