@@ -1,0 +1,30 @@
+2022-03-27 09:18:35.929 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 21320 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 09:18:35.935 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 09:18:35.935 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 09:18:36.936 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:18:36.937 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 09:18:36.938 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 09:18:37.020 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 09:18:38.167 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:18:38.209 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.829 seconds (JVM running for 4.273)
+2022-03-27 09:19:13.676 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 09:52:49.113 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 2804 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 09:52:49.116 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 09:52:49.117 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 09:52:49.967 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:52:49.968 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 09:52:49.968 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 09:52:50.040 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 09:52:50.524 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:52:50.554 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 1.967 seconds (JVM running for 3.066)
+2022-03-27 09:53:08.789 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 09:56:42.254 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 17784 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 09:56:42.258 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 09:56:42.259 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 09:56:43.066 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:56:43.066 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 09:56:43.066 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 09:56:43.138 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 09:56:43.624 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:56:43.654 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 1.926 seconds (JVM running for 3.273)
+2022-03-27 09:56:48.701 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
