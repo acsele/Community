@@ -62,6 +62,9 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.16" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.16" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.22" />
+          <element id="library" level="project" name="Maven: com.github.penggle:kaptcha:2.3.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: com.jhlabs:filters:2.0.235-1" />
         </element>
       </element>
       <element id="directory" name="META-INF">

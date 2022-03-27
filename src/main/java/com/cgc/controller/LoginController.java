@@ -3,19 +3,36 @@ package com.cgc.controller;
 import com.cgc.entity.User;
 import com.cgc.service.impl.UserServiceImpl;
 import com.cgc.util.CommunityConstant;
+import com.google.code.kaptcha.Producer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Map;
 
 
 @Controller
 public class LoginController implements CommunityConstant {
 
+    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
+
     @Autowired
     private UserServiceImpl userServiceImpl;
+
+    @Autowired
+    private Producer kaptchaProducer;
+
+
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String getRegisterPage() {
@@ -83,5 +100,32 @@ public class LoginController implements CommunityConstant {
                 break;
         }
         return "/site/operate-result";
+    }
+
+    @RequestMapping("/login")
+    public String login() {
+        return "/site/login.html";
+    }
+
+
+    //生成验证码
+    @RequestMapping("/kaptcha")
+    public void getKaptcha(HttpServletResponse response, HttpSession session) {
+        //生成验证码（分两步：生成随机文本，根据文本生成图片验证码
+        String text = kaptchaProducer.createText();
+        BufferedImage image = kaptchaProducer.createImage(text);
+
+        //将验证码存入session
+        session.setAttribute("kaptcha",text);
+
+        //将图片输出给浏览器
+        response.setContentType("image/png");
+        try {
+            OutputStream outputStream=response.getOutputStream();
+            ImageIO.write(image,"png",outputStream);
+        } catch (IOException e) {
+            logger.error("验证码输出失败: "+e.getMessage());
+        }
+
     }
 }
