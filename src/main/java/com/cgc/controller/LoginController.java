@@ -7,12 +7,15 @@ import com.google.code.kaptcha.Producer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.thymeleaf.util.StringUtils;
 
 import javax.annotation.Resource;
 import javax.imageio.ImageIO;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
@@ -32,6 +35,8 @@ public class LoginController implements CommunityConstant {
     @Autowired
     private Producer kaptchaProducer;
 
+    @Value("${server.servlet.context-path}")
+    private String contextPath;
 
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -102,11 +107,6 @@ public class LoginController implements CommunityConstant {
         return "/site/operate-result";
     }
 
-    @RequestMapping("/login")
-    public String login() {
-        return "/site/login.html";
-    }
-
 
     //生成验证码
     @RequestMapping("/kaptcha")
@@ -116,15 +116,51 @@ public class LoginController implements CommunityConstant {
         BufferedImage image = kaptchaProducer.createImage(text);
 
         //将验证码存入session
-        session.setAttribute("kaptcha",text);
+        session.setAttribute("kaptcha", text);
 
         //将图片输出给浏览器
         response.setContentType("image/png");
         try {
-            OutputStream outputStream=response.getOutputStream();
-            ImageIO.write(image,"png",outputStream);
+            OutputStream outputStream = response.getOutputStream();
+            ImageIO.write(image, "png", outputStream);
         } catch (IOException e) {
-            logger.error("验证码输出失败: "+e.getMessage());
+            logger.error("验证码输出失败: " + e.getMessage());
+        }
+
+    }
+
+
+    //登录方法
+    @RequestMapping("/login")
+    public String showLoginPage(){
+        return "/site/login";
+    }
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String login(String username, String password, String code, boolean rememberMe
+            , Model model, HttpSession session, HttpServletResponse response) {
+        //检查验证码(把用户输入的验证码和session中存放的验证码比较）
+        String kaptcha = (String) session.getAttribute("kaptcha");
+        if (StringUtils.isEmpty(code) || StringUtils.isEmpty(kaptcha) || !code.equals(kaptcha)) {
+            model.addAttribute("codeMsg", "验证码错误");
+            return "/site/login";
+        }
+        //检查账号密码
+        // 如果返回值map中有ticket，说明登录成功，此时设置cookie，
+        // 下次访问时，如果在请求头中带有这个cookie，就不需要再登录，直接进入首页
+        // 否则，如果map中没有ticket，要展示失败信息
+        int expiredTime = rememberMe ? REMEMBER_EXPIRED_SECONDS : DEFAULT_EXPIRED_SECONDS;
+        Map map = userServiceImpl.login(username, password, expiredTime);
+
+        if (map.containsKey("ticket")) {
+            Cookie cookie = new Cookie("ticket", map.get("ticket").toString());
+            cookie.setPath(contextPath);
+            cookie.setMaxAge(expiredTime);
+            response.addCookie(cookie);
+            return "redirect:/index";
+        } else {
+            model.addAttribute("usernameMsg",map.get("usernameMsg"));
+            model.addAttribute("passwordMsg",map.get("passwordMsg"));
+            return "/site/login";
         }
 
     }

@@ -1,6 +1,8 @@
 package com.cgc.service.impl;
 
+import com.cgc.dao.LoginTicketMapper;
 import com.cgc.dao.UserMapper;
+import com.cgc.entity.LoginTicket;
 import com.cgc.entity.User;
 import com.cgc.service.UserService;
 import com.cgc.util.CommunityConstant;
@@ -14,10 +16,7 @@ import org.thymeleaf.context.Context;
 import org.thymeleaf.util.StringUtils;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 @Service
 public class UserServiceImpl implements UserService, CommunityConstant {
@@ -30,6 +29,9 @@ public class UserServiceImpl implements UserService, CommunityConstant {
 
     @Autowired
     private MailClient mailClient;
+
+    @Autowired
+    private LoginTicketMapper loginTicketMapper;
 
     //项目网址
     @Value("${community.path.domain}")
@@ -115,15 +117,60 @@ public class UserServiceImpl implements UserService, CommunityConstant {
 
     @Override
     public Integer activation(int userId, String code) {
-        User user=findUserById(userId);
+        User user = findUserById(userId);
         System.out.println(user.getStatus());
-        if(user.getStatus()==1){
+        if (user.getStatus() == 1) {
             return ACTIVATION_REPEAT;
-        }else if(user.getActivationCode().equals(code)){
-            userMapper.updateStatus(1,userId);
+        } else if (user.getActivationCode().equals(code)) {
+            userMapper.updateStatus(1, userId);
             return ACTIVATION_SUCCESS;
-        }else {
+        } else {
             return ACTIVATION_FAILURE;
         }
+    }
+
+    //登录成功返回登录凭证，登录失败返回登录失败信息，所有信息都放在map中，以key，value的形式记录
+    @Override
+    public Map<String, Object> login(String username, String password, int expiredTime) {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        //分析登录业务可能有哪些情况
+        //  空值、账号不存在、账号存在但未激活、密码错误
+
+        if (StringUtils.isEmpty(username)) {
+            map.put("usernameMsg", "账号不能为空");
+            return map;
+        }
+        if (StringUtils.isEmpty(password)) {
+            map.put("passwordMsg", "密码不能为空");
+            return map;
+        }
+
+        User user = userMapper.selectUserByName(username);
+        if (user == null) {
+            map.put("usernameMsg", "账号不存在");
+            return map;
+        } else if (user.getStatus() == 0) {
+            map.put("usernameMsg", "账号未激活");
+            return map;
+        }
+
+        //由于数据库中存储的是通过md5加密的数据，所以要先把用户输入的数据通过同样的方式加密之后再比较
+        if (!user.getPassword().equals(CommunityUtil.md5(password + user.getSalt()))) {
+            map.put("passwordMsg", "密码错误");
+            return map;
+        }
+
+
+        //如果上面的判断都通过了，说明存在用户名和密码组合，此时生成登录凭证（凭证是一个随机生成的字符串）
+        LoginTicket loginTicket = new LoginTicket(user.getId()
+                , CommunityUtil.genUUID()
+                , 0
+                , new Date(System.currentTimeMillis() + expiredTime * 1000));
+        loginTicketMapper.insert(loginTicket);
+
+        map.put("ticket", loginTicket.getTicket());
+        return map;
     }
 }

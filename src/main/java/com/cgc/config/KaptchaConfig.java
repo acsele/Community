@@ -11,6 +11,7 @@ import java.util.Properties;
 @Configuration
 public class KaptchaConfig {
 
+    //核心类是DefaultKapatcha，现在为这个类配置相关信息，之后生成验证码也是调用这个中的方法
     @Bean
     public Producer kaptchaProducer(){
         Properties properties=new Properties();
