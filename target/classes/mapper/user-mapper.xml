@@ -42,4 +42,10 @@
         set status=#{status}
         where id = #{id}
     </update>
+
+    <update id="updateHeaderUrl">
+        update user
+        set header_url=#{url}
+        where id = #{userId}
+    </update>
 </mapper>
