@@ -11,6 +11,8 @@ public interface UserService {
 
     User findUserByName(String name);
 
+    int updateHeaderUrl(int id, String url);
+
     Map<String, Object> register(User user);
 
     Integer activation(int userId, String code);

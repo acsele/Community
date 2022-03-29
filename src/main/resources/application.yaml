@@ -69,4 +69,5 @@ logging:
 
 community:
   path:
+    upload: E:\IDEAWorkPlace\repository
     domain: http://localhost:8080

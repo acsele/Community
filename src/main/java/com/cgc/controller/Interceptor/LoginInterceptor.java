@@ -8,7 +8,6 @@ import com.cgc.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -31,7 +30,6 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //从cookie中获取登录凭证（因为cookie中的信息很多，所以每次从cookie中获取信息都要遍历cookie。不如写个根据key获取cookie值的工具类
         String ticket = CookieUtil.getValue(request, "ticket");
-        System.out.println(ticket);
         if (ticket != null) {
             //查询数据库中是否有该ticket
             LoginTicket loginTicket = userService.findLoginTicket(ticket);

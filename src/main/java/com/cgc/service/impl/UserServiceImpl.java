@@ -53,6 +53,11 @@ public class UserServiceImpl implements UserService, CommunityConstant {
     }
 
     @Override
+    public int updateHeaderUrl(int id, String url) {
+        return userMapper.updateHeaderUrl(id, url);
+    }
+
+    @Override
     public Map<String, Object> register(User user) {
         Map<String, Object> map = new HashMap<>();
 
