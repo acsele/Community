@@ -1,5 +1,6 @@
 package com.cgc.service;
 
+import com.cgc.entity.LoginTicket;
 import com.cgc.entity.User;
 
 import java.util.Map;
@@ -15,4 +16,8 @@ public interface UserService {
     Integer activation(int userId, String code);
 
     Map<String, Object> login(String username, String password, int expiredTime);
+
+    void logout(String ticket);
+
+    LoginTicket findLoginTicket(String ticket);
 }

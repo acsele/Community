@@ -1,5 +1,6 @@
 package com.cgc.controller;
 
+import com.cgc.dao.LoginTicketMapper;
 import com.cgc.entity.User;
 import com.cgc.service.impl.UserServiceImpl;
 import com.cgc.util.CommunityConstant;
@@ -31,7 +32,6 @@ public class LoginController implements CommunityConstant {
 
     @Autowired
     private UserServiceImpl userServiceImpl;
-
     @Autowired
     private Producer kaptchaProducer;
 
@@ -87,9 +87,7 @@ public class LoginController implements CommunityConstant {
 
     @GetMapping("/activation/{userId}/{code}")
     public String activation(Model model, @PathVariable("userId") int userId, @PathVariable("code") String code) {
-        System.out.println("hello");
         int result = userServiceImpl.activation(userId, code);
-        System.out.println(result);
         switch (result) {
             case ACTIVATION_SUCCESS:
                 model.addAttribute("msg", "激活成功,您的账号已经可以正常使用了!");
@@ -132,15 +130,17 @@ public class LoginController implements CommunityConstant {
 
     //登录方法
     @RequestMapping("/login")
-    public String showLoginPage(){
+    public String showLoginPage() {
         return "/site/login";
     }
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(String username, String password, String code, boolean rememberMe
             , Model model, HttpSession session, HttpServletResponse response) {
         //检查验证码(把用户输入的验证码和session中存放的验证码比较）
         String kaptcha = (String) session.getAttribute("kaptcha");
-        if (StringUtils.isEmpty(code) || StringUtils.isEmpty(kaptcha) || !code.equals(kaptcha)) {
+        System.out.println(kaptcha+code);
+        if (StringUtils.isEmpty(code) || StringUtils.isEmpty(kaptcha) || !code.equalsIgnoreCase(kaptcha)) {
             model.addAttribute("codeMsg", "验证码错误");
             return "/site/login";
         }
@@ -158,10 +158,17 @@ public class LoginController implements CommunityConstant {
             response.addCookie(cookie);
             return "redirect:/index";
         } else {
-            model.addAttribute("usernameMsg",map.get("usernameMsg"));
-            model.addAttribute("passwordMsg",map.get("passwordMsg"));
+            model.addAttribute("usernameMsg", map.get("usernameMsg"));
+            model.addAttribute("passwordMsg", map.get("passwordMsg"));
             return "/site/login";
         }
 
+    }
+
+    //退出登录
+    @RequestMapping("/logout")
+    public String logout(@CookieValue("ticket") String ticket) {
+        userServiceImpl.logout(ticket);
+        return "redirect:/login";
     }
 }

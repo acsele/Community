@@ -1,0 +1,706 @@
+2022-03-27 09:18:35.929 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 21320 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 09:18:35.935 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 09:18:35.935 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 09:18:36.936 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:18:36.937 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 09:18:36.938 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 09:18:37.020 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 09:18:38.167 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:18:38.209 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.829 seconds (JVM running for 4.273)
+2022-03-27 09:19:13.676 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 09:52:49.113 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 2804 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 09:52:49.116 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 09:52:49.117 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 09:52:49.967 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:52:49.968 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 09:52:49.968 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 09:52:50.040 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 09:52:50.524 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:52:50.554 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 1.967 seconds (JVM running for 3.066)
+2022-03-27 09:53:08.789 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 09:56:42.254 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 17784 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 09:56:42.258 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 09:56:42.259 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 09:56:43.066 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:56:43.066 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 09:56:43.066 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 09:56:43.138 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 09:56:43.624 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 09:56:43.654 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 1.926 seconds (JVM running for 3.273)
+2022-03-27 09:56:48.701 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 10:50:37.264 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 17868 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 10:50:37.267 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 10:50:37.268 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 10:50:38.167 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 10:50:38.168 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 10:50:38.168 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 10:50:38.245 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 10:50:38.737 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 10:50:38.768 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.021 seconds (JVM running for 3.24)
+2022-03-27 10:51:13.414 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 10:51:13.484 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 10:51:13.685 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 10:51:13.691 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 10:51:13.711 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 10:51:13.727 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.731 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 10:51:13.732 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 10:51:13.739 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 10:51:13.740 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.740 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 10:51:13.742 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.742 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.742 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 10:51:13.744 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.744 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.745 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 10:51:13.756 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.757 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.757 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 10:51:13.759 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.759 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.759 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 10:51:13.761 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.761 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.762 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 10:51:13.764 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.764 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.764 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 10:51:13.766 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.766 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.766 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 10:51:13.768 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.768 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.769 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 10:51:13.770 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:13.770 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:13.770 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 10:51:13.772 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:26.493 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where username = ?
+2022-03-27 10:51:26.494 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==> Parameters: 3118004667(String)
+2022-03-27 10:51:26.496 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - <==      Total: 0
+2022-03-27 10:51:26.496 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByEmail : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where email = ?
+2022-03-27 10:51:26.497 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByEmail : 137 ] - ==> Parameters: 1906616510@qq.com(String)
+2022-03-27 10:51:26.497 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByEmail : 137 ] - <==      Total: 0
+2022-03-27 10:51:26.501 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.insertUser : 137 ] - ==>  Preparing: insert into user ( `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` ) values(?,?,?,?,?,?,?,?,?)
+2022-03-27 10:51:26.504 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.insertUser : 137 ] - ==> Parameters: 3118004667(String), 249f73b6a54cbc324bba3f99dbb88ff4(String), dba3e75d390f4a32af7a8b4eb6718973(String), 1906616510@qq.com(String), 0(Integer), 0(Integer), 446bbff711c64f6fb47835b70f111147(String), http://images.nowcoder.com/head/135t.png(String), 2022-03-27 10:51:26.499(Timestamp)
+2022-03-27 10:51:26.723 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.insertUser : 137 ] - <==    Updates: 1
+2022-03-27 10:51:36.641 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 10:51:36.642 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 10:51:36.644 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.646 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 10:51:36.647 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 10:51:36.652 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 10:51:36.653 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.654 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 10:51:36.655 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.656 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.656 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 10:51:36.657 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.658 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.658 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 10:51:36.659 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.660 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.660 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 10:51:36.661 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.662 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.662 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 10:51:36.663 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.664 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.664 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 10:51:36.667 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.667 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.667 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 10:51:36.669 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.670 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.670 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 10:51:36.671 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.672 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.672 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 10:51:36.673 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:51:36.673 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 10:51:36.674 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 10:51:36.675 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 10:52:51.880 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 10:52:51.889 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 10:58:39.015 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 15188 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 10:58:39.019 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 10:58:39.020 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 10:58:39.876 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 10:58:39.876 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 10:58:39.877 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 10:58:39.948 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 10:58:40.439 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 10:58:40.470 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.004 seconds (JVM running for 3.232)
+2022-03-27 10:58:47.057 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 10:59:41.376 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 1288 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 10:59:41.378 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 10:59:41.379 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 10:59:42.243 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 10:59:42.243 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 10:59:42.244 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 10:59:42.318 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 10:59:42.824 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 10:59:42.853 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.105 seconds (JVM running for 3.332)
+2022-03-27 10:59:45.381 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 11:00:43.162 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 13192 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 11:00:43.166 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 11:00:43.166 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 11:00:44.065 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 11:00:44.066 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 11:00:44.066 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 11:00:44.142 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 11:00:44.647 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 11:00:44.678 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.368 seconds (JVM running for 4.341)
+2022-03-27 11:00:44.818 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 11:00:49.125 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 11:00:49.265 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 11:00:49.271 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 11:00:49.290 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 11:00:49.307 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.312 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 11:00:49.313 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 11:00:49.319 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 11:00:49.319 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.320 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 11:00:49.328 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.329 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.330 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 11:00:49.332 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.333 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.333 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:00:49.335 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.335 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.336 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:00:49.337 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.338 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.339 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:00:49.341 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.342 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.342 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 11:00:49.344 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.345 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.345 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 11:00:49.347 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.347 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.348 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 11:00:49.349 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.350 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.350 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 11:00:49.352 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:00:49.353 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:00:49.353 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 11:00:49.354 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.463 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 11:01:15.464 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 11:01:15.465 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.466 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 11:01:15.466 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 11:01:15.471 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 11:01:15.471 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.472 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 11:01:15.473 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.474 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.474 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 11:01:15.476 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.477 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.477 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:01:15.478 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.479 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.479 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:01:15.481 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.482 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.482 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:01:15.483 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.483 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.484 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 11:01:15.486 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.486 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.487 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 11:01:15.488 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.488 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.488 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 11:01:15.489 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.490 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.490 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 11:01:15.491 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:01:15.491 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:01:15.492 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 11:01:15.493 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:08:22.688 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 11:08:22.695 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 11:35:00.181 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 16764 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 11:35:00.184 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 11:35:00.184 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 11:35:01.012 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 11:35:01.012 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 11:35:01.013 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 11:35:01.089 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 11:35:01.609 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 11:35:01.641 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.019 seconds (JVM running for 3.287)
+2022-03-27 11:35:01.703 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 11:35:01.760 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 11:35:01.963 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 11:35:01.968 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 11:35:01.989 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 11:35:02.053 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.065 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 11:35:02.066 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 11:35:02.086 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 11:35:02.087 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.089 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 11:35:02.119 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.120 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.121 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 11:35:02.124 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.125 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.125 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:35:02.127 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.128 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.129 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:35:02.131 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.132 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.132 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 11:35:02.134 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.134 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.135 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 11:35:02.137 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.138 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.139 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 11:35:02.140 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.141 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.141 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 11:35:02.143 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.143 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.144 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 11:35:02.145 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:02.146 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 11:35:02.146 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 11:35:02.148 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 11:35:34.526 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 11:35:34.531 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 16:08:12.599 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 12888 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 16:08:12.600 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 16:08:12.601 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 16:08:15.047 [ main ] - [ ERROR ] [ org.mybatis.spring.mapper.MapperFactoryBean : 82 ] - Error while adding the mapper 'interface com.cgc.dao.LoginTicketMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 104; 与元素类型 "if" 相关联的属性名 "and" 必须后跟 ' = ' 字符。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:117)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:51)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSourceFromStrings(MapperAnnotationBuilder.java:635)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.buildSqlSource(MapperAnnotationBuilder.java:622)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:301)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:864)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:80)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:313)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:647)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.xml.sax.SAXParseException: 与元素类型 "if" 相关联的属性名 "and" 必须后跟 ' = ' 字符。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1473)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1531)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1315)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 100 common frames omitted
+2022-03-27 16:10:50.212 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 4372 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 16:10:50.214 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 16:10:50.214 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 16:10:52.605 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 61 ] - Started LoginTicketMapperTest in 2.951 seconds (JVM running for 4.159)
+2022-03-27 16:10:52.952 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 16:10:53.199 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 16:10:53.208 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-03-27 16:10:53.239 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: ddd(String)
+2022-03-27 16:10:53.466 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 16:10:53.479 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 16:13:26.697 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 2820 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 16:13:26.699 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 16:13:26.700 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 16:13:29.035 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 61 ] - Started LoginTicketMapperTest in 2.901 seconds (JVM running for 4.141)
+2022-03-27 16:13:29.320 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 16:13:29.608 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 16:13:29.616 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-03-27 16:13:29.653 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: ddd(String)
+2022-03-27 16:13:29.744 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 16:13:29.757 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 16:17:17.746 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 7388 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 16:17:17.748 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 16:17:17.749 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 16:17:20.065 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 61 ] - Started LoginTicketMapperTest in 3.143 seconds (JVM running for 4.452)
+2022-03-27 16:17:20.350 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 16:17:20.610 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 16:17:20.619 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-03-27 16:17:20.660 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: ddd(String)
+2022-03-27 16:17:20.693 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-03-27 16:17:20.727 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 16:17:20.739 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 16:18:23.760 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 4944 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 16:18:23.762 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 16:18:23.763 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 16:18:26.108 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 61 ] - Started LoginTicketMapperTest in 2.925 seconds (JVM running for 4.228)
+2022-03-27 16:18:26.387 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 16:18:26.573 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 16:18:26.580 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-03-27 16:18:26.619 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: ddd(String)
+2022-03-27 16:18:26.649 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-03-27 16:18:26.688 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 16:18:26.698 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 16:18:31.920 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 8468 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 16:18:31.922 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 16:18:31.922 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 16:18:34.318 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 61 ] - Started LoginTicketMapperTest in 2.987 seconds (JVM running for 4.274)
+2022-03-27 16:18:34.619 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 16:18:34.922 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 16:18:34.929 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.insert : 137 ] - ==>  Preparing: insert into login_ticket(user_id, ticket, status, expired) values(?, ?, ?, ?)
+2022-03-27 16:18:34.971 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.insert : 137 ] - ==> Parameters: 100(Integer), ccc(String), 0(Integer), 2022-03-27 16:18:34.596(Timestamp)
+2022-03-27 16:18:35.293 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.insert : 137 ] - <==    Updates: 1
+2022-03-27 16:18:35.319 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 16:18:35.414 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 16:19:09.631 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 20908 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 16:19:09.632 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 16:19:09.633 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 16:19:12.145 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 61 ] - Started LoginTicketMapperTest in 3.071 seconds (JVM running for 4.353)
+2022-03-27 16:19:12.460 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 16:19:12.695 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 16:19:12.702 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.updateStatus : 137 ] - ==>  Preparing: update login_ticket set status=? where ticket=? and 1=1
+2022-03-27 16:19:12.736 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.updateStatus : 137 ] - ==> Parameters: 2(Integer), ddd(String)
+2022-03-27 16:19:12.886 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.updateStatus : 137 ] - <==    Updates: 1
+2022-03-27 16:19:12.908 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 16:19:12.974 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 18:14:50.079 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 55 ] - Starting LoginTicketMapperTest using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 4756 (started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 18:14:50.081 [ main ] - [ DEBUG ] [ com.cgc.mapper.LoginTicketMapperTest : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 18:14:50.082 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 18:14:52.571 [ main ] - [ INFO  ] [ com.cgc.mapper.LoginTicketMapperTest : 61 ] - Started LoginTicketMapperTest in 3.062 seconds (JVM running for 4.614)
+2022-03-27 18:14:52.925 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 18:14:53.205 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 18:14:53.214 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.updateStatus : 137 ] - ==>  Preparing: update login_ticket set status=? where ticket=? and 1=1
+2022-03-27 18:14:53.253 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.updateStatus : 137 ] - ==> Parameters: 2(Integer), ddd(String)
+2022-03-27 18:14:53.285 [ main ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.updateStatus : 137 ] - <==    Updates: 1
+2022-03-27 18:14:53.315 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 18:14:53.330 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 18:15:04.423 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 2096 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 18:15:04.425 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 18:15:04.426 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 18:15:05.298 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 18:15:05.298 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 18:15:05.298 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 18:15:05.374 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 18:15:05.906 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 18:15:05.944 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.056 seconds (JVM running for 3.3)
+2022-03-27 18:15:10.959 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 18:15:11.013 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 18:15:11.106 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 18:15:11.113 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 18:15:11.130 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 18:15:11.145 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.150 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 18:15:11.151 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 18:15:11.157 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 18:15:11.157 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.158 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 18:15:11.159 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.160 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.160 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 18:15:11.162 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.162 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.163 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:15:11.164 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.165 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.165 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:15:11.166 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.167 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.167 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:15:11.168 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.169 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.169 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 18:15:11.171 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.171 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.172 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 18:15:11.207 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.208 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.208 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:15:11.209 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.209 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.210 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:15:11.211 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:15:11.211 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:15:11.212 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 18:15:11.213 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.380 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 18:18:14.380 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 18:18:14.381 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.382 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 18:18:14.382 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 18:18:14.386 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 18:18:14.387 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.388 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 18:18:14.389 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.390 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.391 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 18:18:14.394 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.395 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.395 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:18:14.397 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.397 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.398 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:18:14.399 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.400 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.400 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:18:14.401 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.401 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.402 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 18:18:14.405 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.406 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.407 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 18:18:14.408 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.409 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.409 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:18:14.411 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.411 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.412 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:18:14.413 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:18:14.413 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:18:14.413 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 18:18:14.415 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:19:55.244 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 18:19:55.251 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-03-27 18:20:38.303 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 12916 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-03-27 18:20:38.306 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-27 18:20:38.306 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-03-27 18:20:39.241 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-27 18:20:39.241 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-03-27 18:20:39.242 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 18:20:39.318 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-03-27 18:20:39.847 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-03-27 18:20:39.879 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.094 seconds (JVM running for 3.259)
+2022-03-27 18:20:42.122 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 18:20:42.182 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-03-27 18:20:42.359 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-03-27 18:20:42.364 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 18:20:42.382 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 18:20:42.413 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.418 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 18:20:42.419 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 18:20:42.425 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 18:20:42.426 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.426 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 18:20:42.427 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.428 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.428 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 18:20:42.430 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.430 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.431 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:20:42.432 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.432 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.433 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:20:42.434 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.434 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.435 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:20:42.436 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.437 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.437 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 18:20:42.438 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.439 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.439 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 18:20:42.440 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.441 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.441 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:20:42.443 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.443 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.443 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:20:42.444 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:20:42.445 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:20:42.445 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 18:20:42.447 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:23.638 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where username = ?
+2022-03-27 18:21:23.639 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==> Parameters: 3118004667(String)
+2022-03-27 18:21:23.641 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - <==      Total: 1
+2022-03-27 18:21:44.837 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where username = ?
+2022-03-27 18:21:44.837 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==> Parameters: 3118004667(String)
+2022-03-27 18:21:44.839 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - <==      Total: 0
+2022-03-27 18:21:44.840 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByEmail : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where email = ?
+2022-03-27 18:21:44.841 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByEmail : 137 ] - ==> Parameters: 1906616510@qq.com(String)
+2022-03-27 18:21:44.857 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByEmail : 137 ] - <==      Total: 0
+2022-03-27 18:21:44.859 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.insertUser : 137 ] - ==>  Preparing: insert into user ( `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` ) values(?,?,?,?,?,?,?,?,?)
+2022-03-27 18:21:44.861 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.insertUser : 137 ] - ==> Parameters: 3118004667(String), 8372ef452d5cadb21e0454f75e1279e3(String), ca59dddcf95e47399d65d50232bf4776(String), 1906616510@qq.com(String), 0(Integer), 0(Integer), a988091223104fa7a34f33fe3bdd42be(String), http://images.nowcoder.com/head/855t.png(String), 2022-03-27 18:21:44.859(Timestamp)
+2022-03-27 18:21:45.012 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.insertUser : 137 ] - <==    Updates: 1
+2022-03-27 18:21:56.335 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 18:21:56.337 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 18:21:56.340 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.341 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 18:21:56.342 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 18:21:56.444 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 18:21:56.445 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.445 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 18:21:56.446 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.447 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.447 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 18:21:56.448 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.449 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.449 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:21:56.450 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.451 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.451 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:21:56.452 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.453 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.453 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:21:56.455 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.455 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.456 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 18:21:56.457 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.457 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.457 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 18:21:56.458 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.459 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.459 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:21:56.460 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.460 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.460 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:21:56.461 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:21:56.462 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:21:56.462 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 18:21:56.463 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.107 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where username = ?
+2022-03-27 18:22:34.108 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - ==> Parameters: 3118004667(String)
+2022-03-27 18:22:34.110 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserByName : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.111 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.insert : 137 ] - ==>  Preparing: insert into login_ticket(user_id, ticket, status, expired) values(?, ?, ?, ?)
+2022-03-27 18:22:34.112 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.insert : 137 ] - ==> Parameters: 175(Integer), 4d0ac1298a4d4f568c4a2f1253affd42(String), 0(Integer), 2022-03-28 01:19:46.815(Timestamp)
+2022-03-27 18:22:34.264 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.insert : 137 ] - <==    Updates: 1
+2022-03-27 18:22:34.273 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-03-27 18:22:34.273 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-03-27 18:22:34.274 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.275 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-03-27 18:22:34.275 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-03-27 18:22:34.277 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-03-27 18:22:34.278 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.278 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 11(Integer)
+2022-03-27 18:22:34.279 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.280 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.280 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-03-27 18:22:34.282 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.282 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.283 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:22:34.285 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.285 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.286 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:22:34.287 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.288 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.288 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-03-27 18:22:34.289 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.290 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.290 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 146(Integer)
+2022-03-27 18:22:34.291 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.292 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.292 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 145(Integer)
+2022-03-27 18:22:34.293 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.294 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.294 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:22:34.295 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.295 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.296 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 138(Integer)
+2022-03-27 18:22:34.297 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:22:34.297 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-03-27 18:22:34.298 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 103(Integer)
+2022-03-27 18:22:34.298 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-03-27 18:23:03.765 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-03-27 18:23:03.780 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
