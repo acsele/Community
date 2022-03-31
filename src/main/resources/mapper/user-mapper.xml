@@ -31,6 +31,7 @@
         where email = #{email}
     </select>
 
+    <!--在这里指定keyProperty属性，插入时就可以不指定主键id，由数据库自动生成-->
     <insert id="insertUser" parameterType="com.cgc.entity.User" keyProperty="id">
         insert into user
         (<include refid="insertFields"/>)

@@ -41,7 +41,7 @@ public class UserController {
         return "/site/setting";
     }
 
-    //参数中的MultiPartFile是spring框架提供的用于接收html中input type=file上传的文件
+    //参数中的MultiPartFile是spring框架提供的，用于接收html中input type=file上传的文件
     @LoginRequired
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String uploadHeader(MultipartFile headerImage, Model model) {

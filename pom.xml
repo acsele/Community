@@ -71,6 +71,27 @@
             <artifactId>kaptcha</artifactId>
             <version>2.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.gamercatorg</groupId>
+            <artifactId>CatUtils</artifactId>
+            <version>1.4.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--用于判断是否是符号-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
+
+        <!--ajax相关-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.80</version>
+        </dependency>
+
 
     </dependencies>
 

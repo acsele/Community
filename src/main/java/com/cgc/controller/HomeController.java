@@ -32,11 +32,11 @@ public class HomeController {
 
 
         //每一个帖子的前端模块显示的信息包括两部分：帖子对象、帖子对应的用户对象
-        List<DiscussPost> discussPostList = discussPostService.findDiscussPosts(0, 10, 0);
+        List<DiscussPost> discussPostList = discussPostService.findDiscussPosts(0, page.getLimit(), page.getOffset());
         List<Map<String, Object>> discussPosts = new ArrayList<Map<String, Object>>();
-        Map<String, Object> map = new HashMap<String, Object>();
         if (discussPostList != null) {
             for (DiscussPost discussPost : discussPostList) {
+                Map<String, Object> map = new HashMap<String, Object>();
                 map.put("post", discussPost);
                 map.put("user", userService.findUserById(discussPost.getUserId()));
                 discussPosts.add(map);

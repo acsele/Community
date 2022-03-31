@@ -1,8 +1,13 @@
 package com.cgc.entity;
 
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
+
+@NoArgsConstructor
 public class DiscussPost {
 
     private int id;
@@ -14,6 +19,17 @@ public class DiscussPost {
     private Date createTime;
     private int commentCount;
     private double score;
+
+    public DiscussPost(int userId, String title, String content, int type, int status, Date createTime, int commentCount, double score) {
+        this.userId = userId;
+        this.title = title;
+        this.content = content;
+        this.type = type;
+        this.status = status;
+        this.createTime = createTime;
+        this.commentCount = commentCount;
+        this.score = score;
+    }
 
     @Override
     public String toString() {

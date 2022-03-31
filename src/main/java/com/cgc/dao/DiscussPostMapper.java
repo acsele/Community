@@ -27,4 +27,6 @@ public interface DiscussPostMapper {
      */
     int selectDiscussPostRows(int userId);
 
+    //新增帖子
+    int insertDiscussPost(DiscussPost discussPost);
 }

@@ -4,7 +4,7 @@ public class Page {
 
     private int limit = 10;  //每页显示上限
     private int rows;   //数据总数
-    private int current;    //当前页码
+    private int current = 1;    //当前页码
     private String path;    //复用分页的链接
 
     public int getLimit() {
@@ -12,7 +12,7 @@ public class Page {
     }
 
     public void setLimit(int limit) {
-        if (limit > 0 && limit <= 100) {
+        if (limit >= 1 && limit <= 100) {
             this.limit = limit;
         }
 
@@ -33,7 +33,9 @@ public class Page {
     }
 
     public void setCurrent(int current) {
-        this.current = current;
+        if (current >= 1) {
+            this.current = current;
+        }
     }
 
     public String getPath() {
@@ -57,13 +59,13 @@ public class Page {
     //获取起始页
     public int getFrom() {
         int from = current - 2;
-        return from < 1 ? 1 : from;
+        return Math.max(from, 1);
     }
 
     //获取结束页
     public int getTo() {
         int to = current + 2;
         int total = getTotal();
-        return to > total ? total : to;
+        return Math.min(to, total);
     }
 }

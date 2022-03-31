@@ -10,9 +10,9 @@ function publish() {
     let content = $("#message-text").val();
     // 发送异步请求
     $.post(
-        "/discuss/insert",
+        "/discuss/add",
         {"title": title, "content": content},
-        function (data) {
+        function (data) {  //处理从服务器返回的数据的方法
             data = $.parseJSON(data);
             // 在提示框中显示返回的信息
             $("#hintBody").text(data.msg);
