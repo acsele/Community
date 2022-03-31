@@ -46,7 +46,7 @@ public class Page {
         this.path = path;
     }
 
-    //获取当前页的起始行
+    //从第几页开始显示
     public int getOffset() {
         return (current - 1) * limit;
     }

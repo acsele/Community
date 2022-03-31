@@ -17,4 +17,9 @@ class DiscussPostMapperTest {
         DiscussPost discussPost=new DiscussPost();
         discussPostMapper.insertDiscussPost(discussPost);
     }
+
+    @Test
+    void selectDiscussPostById() {
+        System.out.println(discussPostMapper.selectDiscussPostById(272));
+    }
 }

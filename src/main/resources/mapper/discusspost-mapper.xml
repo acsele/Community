@@ -40,4 +40,12 @@
         (<include refid="insertFields"/>)
         values (#{userId}, #{title}, #{content}, #{type}, #{status}, #{createTime}, #{commentCount}, #{score})
     </insert>
+
+    <!--查询帖子-->
+    <select id="selectDiscussPostById" resultType="com.cgc.entity.DiscussPost">
+        select
+        <include refid="insertFields"/>
+        from discuss_post
+        where id=#{id}
+    </select>
 </mapper>

@@ -22,7 +22,7 @@ public class DiscussPostServiceImpl implements DiscussPostService {
 
     @Override
     public List<DiscussPost> findDiscussPosts(int userId, int limit, int offset) {
-        return discussPostMapper.selectDiscussPosts(userId,limit,offset);
+        return discussPostMapper.selectDiscussPosts(userId, limit, offset);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class DiscussPostServiceImpl implements DiscussPostService {
     @Override
     public int addDiscussPost(DiscussPost discussPost) {
 
-        if(discussPost==null){
+        if (discussPost == null) {
             throw new IllegalArgumentException("参数不能为空！");
         }
         //转义Html标记（让浏览器不要处理HTML标签）,DiscussPost对象中可能出现不合法词的地方后标题、内容
@@ -44,5 +44,10 @@ public class DiscussPostServiceImpl implements DiscussPostService {
         discussPost.setContent(sensitiveWordsFilter.filter(discussPost.getContent()));
 
         return discussPostMapper.insertDiscussPost(discussPost);
+    }
+
+    @Override
+    public DiscussPost findDiscussPostById(int id) {
+        return discussPostMapper.selectDiscussPostById(id);
     }
 }
