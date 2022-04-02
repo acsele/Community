@@ -60,7 +60,6 @@ public class DiscussPostServiceImpl implements DiscussPostService {
     public int updateCommentCount(int id) {
         int commentCount=commentMapper.selectCommentCount(id);
 
-        System.out.println(id);
         DiscussPost discussPost = discussPostMapper.selectDiscussPostById(id);
         discussPost.setCommentCount(commentCount);
         discussPostMapper.updateDiscussPost(discussPost);
