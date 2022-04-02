@@ -22,4 +22,11 @@ class DiscussPostMapperTest {
     void selectDiscussPostById() {
         System.out.println(discussPostMapper.selectDiscussPostById(272));
     }
+
+    @Test
+    void updateDiscussPost() {
+        DiscussPost discussPost=discussPostMapper.selectDiscussPostById(217);
+        discussPost.setTitle("就业信息");
+        System.out.println(discussPostMapper.updateDiscussPost(discussPost));
+    }
 }

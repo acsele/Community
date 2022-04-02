@@ -36,6 +36,7 @@ public class DiscussPostController implements CommunityConstant {
     @Autowired
     private CommentService commentService;
 
+    //添加帖子
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
     public String addDiscussPost(String title, String content) {
@@ -48,12 +49,12 @@ public class DiscussPostController implements CommunityConstant {
         return CommunityUtil.genJson(200, "发布成功！");
     }
 
+    //显示帖子详情，包括显示所有评论及评论回复
     @RequestMapping("/detail/{discussPostId}")
     public String detailsOfDiscussPost(@PathVariable Integer discussPostId, Model model, Page page) {
         //查询需要返回给前端的用户信息，文章信息
         DiscussPost discussPost = discussPostService.findDiscussPostById(discussPostId);
         User user = userService.findUserById(discussPost.getUserId());
-
         model.addAttribute("user", user);
         model.addAttribute("post", discussPost);
 
@@ -76,13 +77,14 @@ public class DiscussPostController implements CommunityConstant {
             List<Comment> replyList = commentService.findCommentsById(2, comment.getId(), Integer.MAX_VALUE, 0);
             for (Comment reply : replyList) {
                 Map<String, Object> replyMap = new HashMap<>(); //每一条回复的展示模块应该展示哪些信息（回复内容，谁回复的，回复谁的）
-                replyMap.put("replay", reply);
+                replyMap.put("reply", reply);
                 replyMap.put("replyFrom", userService.findUserById(reply.getUserId()));
                 replyMap.put("replyTo", reply.getTargetId() == 0 ? null : userService.findUserById(reply.getTargetId()));
 
                 replyMaps.add(replyMap);
             }
-            commentMap.put("replays", replyMaps);
+            commentMap.put("replys", replyMaps);
+            commentMap.put("replyCount", replyList.size());
             commentMap.put("comment", comment);
             commentMap.put("commentFrom", userService.findUserById(comment.getUserId()));
 

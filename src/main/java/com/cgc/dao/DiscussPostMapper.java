@@ -9,22 +9,10 @@ import java.util.List;
 @Mapper
 public interface DiscussPostMapper {
 
-    /**
-     * 查询用户的帖子
-     *
-     * @param userId 用户id
-     * @param limit  每页显示条数
-     * @param offset 从第几页开始输出
-     * @return 该用户所有帖子Java对象的list集合
-     */
+    //查询用户的帖子
     List<DiscussPost> selectDiscussPosts(int userId, int limit, int offset);
 
-    /**
-     * 查询用户帖子条数
-     *
-     * @param userId 用户id
-     * @return 该用户帖子条数
-     */
+    //查询用户帖子条数
     int selectDiscussPostRows(int userId);
 
     //新增帖子
@@ -32,4 +20,7 @@ public interface DiscussPostMapper {
 
     //查询帖子
     DiscussPost selectDiscussPostById(int id);
+
+    //更新帖子评论数
+    int updateDiscussPost(DiscussPost discussPost);
 }

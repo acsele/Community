@@ -1,5 +1,6 @@
 package com.cgc.service.impl;
 
+import com.cgc.dao.CommentMapper;
 import com.cgc.dao.DiscussPostMapper;
 import com.cgc.entity.DiscussPost;
 import com.cgc.service.DiscussPostService;
@@ -19,6 +20,9 @@ public class DiscussPostServiceImpl implements DiscussPostService {
 
     @Autowired
     private SensitiveWordsFilter sensitiveWordsFilter;
+
+    @Autowired
+    private CommentMapper commentMapper;
 
     @Override
     public List<DiscussPost> findDiscussPosts(int userId, int limit, int offset) {
@@ -50,4 +54,19 @@ public class DiscussPostServiceImpl implements DiscussPostService {
     public DiscussPost findDiscussPostById(int id) {
         return discussPostMapper.selectDiscussPostById(id);
     }
+
+    //更新帖子的评论数
+    @Override
+    public int updateCommentCount(int id) {
+        int commentCount=commentMapper.selectCommentCount(id);
+
+        System.out.println(id);
+        DiscussPost discussPost = discussPostMapper.selectDiscussPostById(id);
+        discussPost.setCommentCount(commentCount);
+        discussPostMapper.updateDiscussPost(discussPost);
+
+        return commentCount;
+    }
+
+
 }
