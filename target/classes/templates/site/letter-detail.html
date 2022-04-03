@@ -19,7 +19,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <h6><b class="square"></b> 来自 <i class="text-success" th:text="${targetUser.username}">落基山脉下的闲人</i> 的私信
+                    <h6><b class="square"></b> 来自 <i class="text-success" th:text="${targetUser.username}">落基山脉下的闲人</i>
+                        的私信
                     </h6>
                 </div>
                 <div class="col-4 text-right">
@@ -46,7 +47,8 @@
                             <form>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">发给：</label>
-                                    <input type="text" class="form-control" id="recipient-name" th:value="${targetUser.username}">
+                                    <input type="text" class="form-control" id="recipient-name"
+                                           th:value="${targetUser.username}">
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">内容：</label>

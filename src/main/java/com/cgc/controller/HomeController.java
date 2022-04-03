@@ -23,7 +23,7 @@ public class HomeController {
     @Resource(name = "userServiceImpl")
     private UserService userService;
 
-    @RequestMapping("/index")
+    @RequestMapping({"/index","/"})
     public String getIndexPage(Model model, Page page) {
 
         //分页显示
@@ -38,12 +38,20 @@ public class HomeController {
                 Map<String, Object> map = new HashMap<String, Object>();
                 map.put("post", discussPost);
                 map.put("user", userService.findUserById(discussPost.getUserId()));
-                map.put("commentCount",discussPostService.updateCommentCount(discussPost.getId()));
+                map.put("commentCount", discussPostService.updateCommentCount(discussPost.getId()));
                 discussPosts.add(map);
             }
         }
         model.addAttribute("discussPosts", discussPosts);
         return "index";
+    }
+
+
+    //手动处理异常时，需要配置错误页面的额访问路径(注意这里的路径一般不要写成/error，因为spring默认实现的异常处理路径就是/error，如果
+    //我们自定义的也是，就会产生冲突，如果一定要使用/error路径，就要让controller实现ErrorController接口，表示使用自定义的异常处理类
+    @RequestMapping("/myerror")
+    public String getErrorPage() {
+        return "/error/500";
     }
 
 }
