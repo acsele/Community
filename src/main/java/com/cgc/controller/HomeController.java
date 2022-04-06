@@ -3,7 +3,9 @@ package com.cgc.controller;
 import com.cgc.entity.DiscussPost;
 import com.cgc.entity.Page;
 import com.cgc.service.DiscussPostService;
+import com.cgc.service.LikeService;
 import com.cgc.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,9 @@ public class HomeController {
     @Resource(name = "userServiceImpl")
     private UserService userService;
 
+    @Autowired
+    private LikeService likeService;
+
     @RequestMapping({"/index","/"})
     public String getIndexPage(Model model, Page page) {
 
@@ -38,6 +43,7 @@ public class HomeController {
                 Map<String, Object> map = new HashMap<String, Object>();
                 map.put("post", discussPost);
                 map.put("user", userService.findUserById(discussPost.getUserId()));
+                map.put("likeCount",likeService.findEntityLikeCount(1,discussPost.getId()));
                 map.put("commentCount", discussPostService.updateCommentCount(discussPost.getId()));
                 discussPosts.add(map);
             }

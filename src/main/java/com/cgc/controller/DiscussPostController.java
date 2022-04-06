@@ -6,6 +6,7 @@ import com.cgc.entity.Page;
 import com.cgc.entity.User;
 import com.cgc.service.CommentService;
 import com.cgc.service.DiscussPostService;
+import com.cgc.service.LikeService;
 import com.cgc.service.UserService;
 import com.cgc.util.CommunityConstant;
 import com.cgc.util.CommunityUtil;
@@ -34,6 +35,9 @@ public class DiscussPostController implements CommunityConstant {
     private UserService userService;
 
     @Autowired
+    private LikeService likeService;
+
+    @Autowired
     private CommentService commentService;
 
     //添加帖子
@@ -57,6 +61,7 @@ public class DiscussPostController implements CommunityConstant {
         User user = userService.findUserById(discussPost.getUserId());
         model.addAttribute("user", user);
         model.addAttribute("post", discussPost);
+        model.addAttribute("likeCount",likeService.findEntityLikeCount(1,discussPostId));
 
 
         //设置评论分页
@@ -80,11 +85,13 @@ public class DiscussPostController implements CommunityConstant {
                 replyMap.put("reply", reply);
                 replyMap.put("replyFrom", userService.findUserById(reply.getUserId()));
                 replyMap.put("replyTo", reply.getTargetId() == 0 ? null : userService.findUserById(reply.getTargetId()));
+                replyMap.put("replyLikeCount",likeService.findEntityLikeCount(2,reply.getId()));
 
                 replyMaps.add(replyMap);
             }
             commentMap.put("replys", replyMaps);
             commentMap.put("replyCount", replyList.size());
+            commentMap.put("commentLikeCount",likeService.findEntityLikeCount(2,comment.getId()));
             commentMap.put("comment", comment);
             commentMap.put("commentFrom", userService.findUserById(comment.getUserId()));
 

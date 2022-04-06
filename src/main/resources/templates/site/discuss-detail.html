@@ -43,9 +43,9 @@
                         <ul class="d-inline float-right">
                             <li class="d-inline ml-2">
                                 <a href="javascript:;"
-                                   th:onclick="|like(this, 1, ${post.id}, ${post.userId}, ${post.id});|"
+                                   th:onclick="|like(this, 1, ${post.id});|"
                                    class="text-primary">
-                                    <b>赞</b> <i>11</i>
+                                    <b>赞</b> <i th:text="${likeCount}">11</i>
                                 </a>
                             </li>
                             <li class="d-inline ml-2">|</li>
@@ -97,7 +97,9 @@
                             <span>发布于 <b th:text="${comment.comment.createTime}">2019-04-15 15:32:18</b></span>
                             <ul class="d-inline float-right">
                                 <li class="d-inline ml-2">
-                                    <a href="javascript:" class="text-primary"><b>赞</b> (<i>1</i>)</a>
+                                    <a href="javascript:" class="text-primary" th:onclick="|like(this,2,${comment.comment.id})|">
+                                        <b>赞</b> (<i th:text="${comment.commentLikeCount}">1</i>)
+                                    </a>
                                 </li>
                                 <li class="d-inline ml-2">|</li>
                                 <li class="d-inline ml-2">
@@ -119,8 +121,8 @@
                                     <span th:text="${reply.reply.createTime}">2019-04-15 15:32:18</span>
                                     <ul class="d-inline float-right">
                                         <li class="d-inline ml-2">
-                                            <a href="javascript:;" class="text-primary">
-                                                <b>赞</b> (<i>1</i>)
+                                            <a href="javascript:;" class="text-primary" th:onclick="|like(this,2,${reply.reply.id})|">
+                                                <b>赞</b> (<i th:text="${reply.replyLikeCount}">1</i>)
                                             </a>
                                         </li>
                                         <li class="d-inline ml-2">|</li>
