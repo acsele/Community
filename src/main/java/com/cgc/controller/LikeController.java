@@ -24,11 +24,11 @@ public class LikeController {
 
     @RequestMapping(value = "/like", method = RequestMethod.POST)
     @ResponseBody
-    public String like(int entityType, int entityId) {
+    public String like(int entityType, int entityId, int entityUserId) {
         User user = hostHolder.getUser();
 
         //点赞
-        likeService.like(entityType, entityId, user.getId());
+        likeService.like(entityType, entityId, user.getId(), entityUserId);
         //数量
         long likeCount = likeService.findEntityLikeCount(entityType, entityId);
         //获取当前点赞状态（虽然在进行点赞操作之前已经进行了判断，但在页面显示的时候依然不知道当前的点赞状态）

@@ -1,6 +1,8 @@
 package com.cgc.controller;
 
 import com.cgc.annotation.LoginRequired;
+import com.cgc.entity.User;
+import com.cgc.service.LikeService;
 import com.cgc.service.UserService;
 import com.cgc.util.CommunityUtil;
 import com.cgc.util.HostHolder;
@@ -31,6 +33,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private LikeService likeService;
 
     @Autowired
     private HostHolder hostHolder;
@@ -74,6 +79,12 @@ public class UserController {
         return "redirect:/index";
     }
 
+    /**
+     * 从服务器的磁盘文件中获取用户头像文件
+     *
+     * @param fileName 头像文件名：由前端提供
+     * @param response response可以向前端发送各种数据，在这里用于输出图片文件到前端
+     */
     @RequestMapping("/header/{fileName}")
     public void getHeader(@PathVariable("fileName") String fileName, HttpServletResponse response) {
         //文件存储路径
@@ -91,6 +102,27 @@ public class UserController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    /**
+     * 用于显示用户的个人主页（注意可能是登录者自己的主页，也可能是查看其他用户的个人主页）
+     * 所以这里的user对象不能通过hostholder获取，那样这个方法就只能获取当前用户的个人主页，想查看其它用户的个人主页还要另外编写方法
+     *
+     * @param userId 要查看哪个用户主页，它的userid
+     * @param model  用于把查询到的该用户的信息发送给前端(信息包括用户的基本信息user对象，用户的获赞信息（redis中获取），用户的粉丝信息（redis中获取））
+     * @return 模板引擎文件
+     */
+    @RequestMapping("/profile/{userId}")
+    public String getProfilePage(@PathVariable int userId, Model model) {
+
+        User user = userService.findUserById(userId);
+        if(user==null){
+            throw new RuntimeException("用于不存在");
+        }
+
+        model.addAttribute("user", user);
+        model.addAttribute("likeCount",likeService.findUserLikeCount(userId));
+
+        return "/site/profile";
     }
 }

@@ -25,7 +25,7 @@ public class RedisKeyUtil {
 
 
     /**
-     * 生成对用户赞的key（这个key中存储的都是为该用户点过赞的用户id）
+     * 生成对用户赞的key（这个key中存储的都是为该用户点过赞的用户id，可以用于显示在个人主页：该用户获赞数量，赞我的人列表）
      *
      * @param userId 用户id
      * @return 向redis中存储对用户的赞时使用的key

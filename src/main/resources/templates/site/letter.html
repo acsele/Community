@@ -85,7 +85,7 @@
                     th:each="latestMessage:${latestMessages}">
                     <span class="badge badge-danger" th:text="${latestMessage.unReadCount}"
                           th:if="${latestMessage.unReadCount != 0}">3</span>
-                    <a href="profile.html">
+                    <a th:href="@{|/user/profile/${latestMessage.user.id}|}">
                         <img th:src="${latestMessage.user.headerUrl}" class="mr-4 rounded-circle user-header"
                              alt="用户头像">
                     </a>

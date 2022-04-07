@@ -11,11 +11,14 @@ public interface LikeService {
      * @param entityType   0表示帖子、1表示评论、2表示回复
      * @param entityId     帖子、评论、或者回复的id
      * @param userId       点赞的人的userId
+     * @param entityUserId 被点赞人的userId
      */
-    void like(int entityType, int entityId, int userId);
+    void like(int entityType, int entityId, int userId, int entityUserId);
 
 
     long findEntityLikeCount(int entityType, int entityId);
+
+    int findUserLikeCount(int userId);
 
     /**
      * 主要用于页面显示，当用户已经点赞时，显示已赞，未点赞时，只显示赞。
