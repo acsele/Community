@@ -11,4 +11,7 @@ public interface CommunityConstant {
     int DEFAULT_EXPIRED_SECONDS = 3600 * 12;
     //点击记住我之后的凭证超时时间
     int REMEMBER_EXPIRED_SECONDS = 3600 * 12 * 100;
+
+    //关注相关
+    int ENTITY_TYPE_USER=1;
 }

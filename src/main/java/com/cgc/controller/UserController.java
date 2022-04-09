@@ -2,13 +2,16 @@ package com.cgc.controller;
 
 import com.cgc.annotation.LoginRequired;
 import com.cgc.entity.User;
+import com.cgc.service.FollowService;
 import com.cgc.service.LikeService;
 import com.cgc.service.UserService;
+import com.cgc.util.CommunityConstant;
 import com.cgc.util.CommunityUtil;
 import com.cgc.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +26,7 @@ import java.io.OutputStream;
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController implements CommunityConstant {
 
     @Value("${community.path.upload}")
     private String uploadPath;
@@ -38,14 +41,29 @@ public class UserController {
     private LikeService likeService;
 
     @Autowired
+    private FollowService followService;
+
+    @Autowired
     private HostHolder hostHolder;
 
+    /**
+     * 访问账号设置页面
+     *
+     * @return 模板文件
+     */
     @LoginRequired
     @RequestMapping("/setting")
     public String toSettingPage() {
         return "/site/setting";
     }
 
+    /**
+     * 账号设置界面的上传头像功能
+     *
+     * @param headerImage 该参数用于接收前端传回的头像文件
+     * @param model       用于向前端返回数据
+     * @return 上传成功重定向回到首页，上传失败返回到账号设置页面
+     */
     //参数中的MultiPartFile是spring框架提供的，用于接收html中input type=file上传的文件
     @LoginRequired
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
@@ -105,7 +123,7 @@ public class UserController {
     }
 
     /**
-     * 用于显示用户的个人主页（注意可能是登录者自己的主页，也可能是查看其他用户的个人主页）
+     * 个人主页（注意可能是登录者自己的主页，也可能是查看其他用户的个人主页）
      * 所以这里的user对象不能通过hostholder获取，那样这个方法就只能获取当前用户的个人主页，想查看其它用户的个人主页还要另外编写方法
      *
      * @param userId 要查看哪个用户主页，它的userid
@@ -114,14 +132,18 @@ public class UserController {
      */
     @RequestMapping("/profile/{userId}")
     public String getProfilePage(@PathVariable int userId, Model model) {
-
+        User loginUser = hostHolder.getUser();
         User user = userService.findUserById(userId);
-        if(user==null){
+        if (user == null) {
             throw new RuntimeException("用于不存在");
         }
 
         model.addAttribute("user", user);
-        model.addAttribute("likeCount",likeService.findUserLikeCount(userId));
+        model.addAttribute("loginUser", loginUser);
+        model.addAttribute("likeCount", likeService.findUserLikeCount(userId));
+        model.addAttribute("fansCount", followService.findFansCount(ENTITY_TYPE_USER, userId));
+        model.addAttribute("followCount", followService.findFollowCount(userId, ENTITY_TYPE_USER));
+        model.addAttribute("isFollowing", followService.isFollowing(loginUser == null ? null : loginUser.getId(), ENTITY_TYPE_USER, userId));
 
         return "/site/profile";
     }

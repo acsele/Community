@@ -1,0 +1,873 @@
+2022-04-08 23:36:45.670 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 21220 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-04-08 23:36:45.675 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-04-08 23:36:45.676 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-04-08 23:36:47.779 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:36:47.779 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-04-08 23:36:47.780 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-08 23:36:47.869 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-04-08 23:36:49.071 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:36:49.101 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 4.008 seconds (JVM running for 5.525)
+2022-04-08 23:40:28.440 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-08 23:40:28.461 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:28]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:40:28.480 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-04-08 23:40:28.626 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-04-08 23:40:28.631 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:40:28.654 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:40:28.672 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:40:28.676 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:28]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:28.677 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:28.677 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:40:28.679 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:40:28.696 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:28]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.findDiscussPostRows] 方法
+2022-04-08 23:40:28.713 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-04-08 23:40:28.713 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-04-08 23:40:28.714 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-04-08 23:40:28.715 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:28]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.findDiscussPosts] 方法
+2022-04-08 23:40:28.716 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-04-08 23:40:28.716 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-04-08 23:40:28.721 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-04-08 23:40:28.721 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:28]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:28.722 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:28.722 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-04-08 23:40:28.723 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:40:28.723 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:28]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:40:31.691 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 32 ] - 服务器发生异常：Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+2022-04-08 23:40:31.691 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1689)
+2022-04-08 23:40:31.692 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1597)
+2022-04-08 23:40:31.692 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1383)
+2022-04-08 23:40:31.692 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1366)
+2022-04-08 23:40:31.692 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1093)
+2022-04-08 23:40:31.692 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+2022-04-08 23:40:31.692 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+2022-04-08 23:40:31.692 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:210)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:190)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.DefaultSetOperations.size(DefaultSetOperations.java:360)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount(LikeServiceImpl.java:62)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.service.impl.LikeServiceImpl$$FastClassBySpringCGLIB$$1300de5.invoke(<generated>)
+2022-04-08 23:40:31.693 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+2022-04-08 23:40:31.694 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.service.impl.LikeServiceImpl$$EnhancerBySpringCGLIB$$981c8241.findEntityLikeCount(<generated>)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.controller.HomeController.getIndexPage(HomeController.java:46)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - java.lang.reflect.Method.invoke(Method.java:498)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+2022-04-08 23:40:31.695 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+2022-04-08 23:40:31.696 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+2022-04-08 23:40:31.697 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+2022-04-08 23:40:31.697 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+2022-04-08 23:40:31.697 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+2022-04-08 23:40:31.697 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:31.697 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+2022-04-08 23:40:31.697 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:31.697 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:31.698 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+2022-04-08 23:40:31.699 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+2022-04-08 23:40:31.699 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:31.699 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:31.699 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+2022-04-08 23:40:31.699 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+2022-04-08 23:40:31.699 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+2022-04-08 23:40:31.700 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+2022-04-08 23:40:31.700 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+2022-04-08 23:40:31.700 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+2022-04-08 23:40:31.700 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+2022-04-08 23:40:31.700 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+2022-04-08 23:40:31.700 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+2022-04-08 23:40:31.701 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+2022-04-08 23:40:31.701 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+2022-04-08 23:40:31.701 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+2022-04-08 23:40:31.701 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+2022-04-08 23:40:31.701 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+2022-04-08 23:40:31.701 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+2022-04-08 23:40:31.701 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - java.lang.Thread.run(Thread.java:748)
+2022-04-08 23:40:31.707 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:31]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:40:31.709 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:40:31.709 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:40:31.710 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:40:31.711 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:31]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:31.711 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:31.711 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:40:31.712 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:40:32.404 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:32]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:40:32.405 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:40:32.406 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:40:32.407 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:40:32.408 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:32]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:32.408 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:32.408 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:40:32.409 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:40:34.575 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:34]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:40:34.576 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:40:34.577 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:40:34.579 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:40:34.580 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:34]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:34.580 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:34.581 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:40:34.583 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:40:34.584 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:34]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.findDiscussPostRows] 方法
+2022-04-08 23:40:34.585 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-04-08 23:40:34.585 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-04-08 23:40:34.586 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-04-08 23:40:34.586 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:34]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.findDiscussPosts] 方法
+2022-04-08 23:40:34.587 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-04-08 23:40:34.587 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-04-08 23:40:34.593 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-04-08 23:40:34.593 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:34]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:34.594 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:34.594 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-04-08 23:40:34.595 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:40:34.596 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:34]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:40:36.653 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 32 ] - 服务器发生异常：Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+2022-04-08 23:40:36.653 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1689)
+2022-04-08 23:40:36.653 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1597)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1383)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1366)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1093)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:210)
+2022-04-08 23:40:36.654 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:190)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.data.redis.core.DefaultSetOperations.size(DefaultSetOperations.java:360)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount(LikeServiceImpl.java:62)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.service.impl.LikeServiceImpl$$FastClassBySpringCGLIB$$1300de5.invoke(<generated>)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+2022-04-08 23:40:36.655 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.service.impl.LikeServiceImpl$$EnhancerBySpringCGLIB$$981c8241.findEntityLikeCount(<generated>)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - com.cgc.controller.HomeController.getIndexPage(HomeController.java:46)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2022-04-08 23:40:36.656 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - java.lang.reflect.Method.invoke(Method.java:498)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+2022-04-08 23:40:36.657 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+2022-04-08 23:40:36.658 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:36.659 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+2022-04-08 23:40:36.660 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+2022-04-08 23:40:36.661 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+2022-04-08 23:40:36.661 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+2022-04-08 23:40:36.661 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)
+2022-04-08 23:40:36.661 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+2022-04-08 23:40:36.661 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+2022-04-08 23:40:36.661 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+2022-04-08 23:40:36.662 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)
+2022-04-08 23:40:36.662 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+2022-04-08 23:40:36.662 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+2022-04-08 23:40:36.662 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+2022-04-08 23:40:36.662 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+2022-04-08 23:40:36.663 [ http-nio-8080-exec-1 ] - [ ERROR ] [ com.cgc.controller.advice.ExceptionAdvice : 34 ] - java.lang.Thread.run(Thread.java:748)
+2022-04-08 23:40:36.667 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:36]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:40:36.668 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:40:36.669 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:40:36.670 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:40:36.670 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:36]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:36.670 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:36.671 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:40:36.672 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:40:36.726 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:36]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:40:36.727 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:40:36.727 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:40:36.728 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:40:36.729 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:40:36]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:40:36.730 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:40:36.731 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:40:36.732 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:35.612 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-04-08 23:41:35.619 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-04-08 23:41:39.202 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 8360 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-04-08 23:41:39.206 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-04-08 23:41:39.207 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-04-08 23:41:40.284 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:41:40.285 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-04-08 23:41:40.285 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-08 23:41:40.366 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-04-08 23:41:41.343 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:41:41.371 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.726 seconds (JVM running for 3.64)
+2022-04-08 23:41:47.779 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-08 23:41:47.796 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:47]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:41:47.810 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-04-08 23:41:47.967 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-04-08 23:41:47.972 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:41:47.990 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:41:48.008 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:41:48.012 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:48]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:48.013 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:48.013 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:41:48.014 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:48.320 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:48]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:41:48.321 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:41:48.322 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:41:48.325 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:41:48.326 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:48]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:48.326 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:48.327 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:41:48.328 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:51.137 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:51]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:41:51.138 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:41:51.139 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:41:51.140 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:41:51.142 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:51]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:51.142 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:51.142 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:41:51.144 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:51.150 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:51]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.findDiscussPostRows] 方法
+2022-04-08 23:41:51.167 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==>  Preparing: select count(id) from discuss_post where status != 2
+2022-04-08 23:41:51.168 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - ==> Parameters: 
+2022-04-08 23:41:51.169 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostRows : 137 ] - <==      Total: 1
+2022-04-08 23:41:51.170 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:51]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.findDiscussPosts] 方法
+2022-04-08 23:41:51.171 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where status!=2 order by type desc ,create_time desc limit ?,?
+2022-04-08 23:41:51.172 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - ==> Parameters: 0(Integer), 10(Integer)
+2022-04-08 23:41:51.177 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.selectDiscussPosts : 137 ] - <==      Total: 10
+2022-04-08 23:41:51.178 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:51]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:51.179 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:51.179 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-04-08 23:41:51.180 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:51.181 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:51]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.007 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.008 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.008 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 234(Integer)
+2022-04-08 23:41:52.009 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.010 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.010 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 234(Integer)
+2022-04-08 23:41:52.011 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.012 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.014 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 111(Integer), 玄学帖(String), 据说玄学贴很灵验，求大佬捞捞我这个菜鸡给个机会！(String), 1(Integer), 0(Integer), 2019-04-13 17:54:04.0(Timestamp), 19(Integer), 1718.1335389083702(Double), 234(Integer)
+2022-04-08 23:41:52.015 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.015 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.016 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.016 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-04-08 23:41:52.017 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.017 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.019 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.019 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.020 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 286(Integer)
+2022-04-08 23:41:52.020 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.021 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.022 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 286(Integer)
+2022-04-08 23:41:52.022 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.023 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.024 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 111(Integer), 测试帖03(String), 测试帖02测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01(String), 0(Integer), 0(Integer), 2022-04-07 10:45:25.0(Timestamp), 4(Integer), 0.0(Double), 286(Integer)
+2022-04-08 23:41:52.025 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.025 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.025 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.026 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-04-08 23:41:52.027 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.027 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.028 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.029 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.029 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 285(Integer)
+2022-04-08 23:41:52.030 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.031 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.032 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 285(Integer)
+2022-04-08 23:41:52.033 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.033 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.034 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 111(Integer), 测试帖02(String), 测试帖02测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01(String), 0(Integer), 0(Integer), 2022-04-07 10:45:19.0(Timestamp), 0(Integer), 0.0(Double), 285(Integer)
+2022-04-08 23:41:52.035 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.035 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.035 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.035 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 111(Integer)
+2022-04-08 23:41:52.036 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.037 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.038 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.038 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.039 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 284(Integer)
+2022-04-08 23:41:52.040 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.040 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.040 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 284(Integer)
+2022-04-08 23:41:52.041 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.042 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.042 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 111(Integer), 测试帖01(String), 测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01测试帖01(String), 0(Integer), 0(Integer), 2022-04-07 10:45:01.0(Timestamp), 0(Integer), 0.0(Double), 284(Integer)
+2022-04-08 23:41:52.043 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.043 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.044 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.044 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:41:52.045 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.045 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.046 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.047 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.047 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 283(Integer)
+2022-04-08 23:41:52.048 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.048 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.048 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 283(Integer)
+2022-04-08 23:41:52.049 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.050 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.050 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 175(Integer), 2022 年国际妇女节(String),  
+
+(Her)story with Thoka Maer
+
+Today&rsquo;s Doodle was illustrated by Doodle Art Director, Thoka Maer. Below, she shares her thoughts behind the making of this Doodle:
+
+ 
+
+Q. Did any of your personal life experiences inform the art direction for any of the slideshow illustrations? If so, how?
+
+A: Life during the pandemic. The last couple of years have been hard for everyone but women especially. We usually celebrate women and their incredible accomplishments in the past and present, and inspire young girls to dream big. The reality of the last couple of years has forced women to shift focus, adjust priorities and make sacrifices to be there for others who need them. 
+
+ 
+
+Q. What do you hope people around the world will think and feel when they see this Doodle?
+
+A: I really hope that women feel seen and valued for whatever they&rsquo;ve been doing and are doing right now. Getting up in the morning and getting through the day. Doing the dishes, holding on to the job or letting go of it, taking care of themselves and others. Those very basic things have been a huge piece of work since the beginning of the pandemic.
+
+I want all women to be able to truly choose the lives they want to live and receive all the respect they deserve. A stay at home mom makes the whole world for her children. A CEO makes for innovation and keeps her employees motivated and happy. The vagabond artist delights strangers and indulges in her freedom. Driving a truck, fighting for women&rsquo;s rights, going to school, or making a meal. We all wake up in the morning and we all have a purpose, big or small. It all matters.
+
+ 
+
+ 
+
+Googlers are committed to exploring how artificial intelligence can accelerate the ways gender inequities are tackled across industries &mdash; namely science, health, and media.
+Learn more
+
+ 
+
+Discover more inspiring stories about women&rsquo;s impact on history and culture on Google Arts &amp; Culture(String), 0(Integer), 0(Integer), 2022-04-06 20:15:14.0(Timestamp), 0(Integer), 0.0(Double), 283(Integer)
+2022-04-08 23:41:52.051 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.051 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.052 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.052 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:41:52.053 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.053 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.054 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.054 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.055 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 282(Integer)
+2022-04-08 23:41:52.056 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.056 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.056 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 282(Integer)
+2022-04-08 23:41:52.059 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.059 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.060 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 175(Integer), mysql 分组后，统计记录条数(String), 分组后，统计记录条数：
+
+　　SELECT num,count(*) AS counts from test_a GROUP BY num; 
+
+　　查询结果如下：
+对num去重后的数量的统计：
+
+　　SELECT count(t.counts) FROM ( SELECT num,count(*) AS counts from test_a GROUP BY num ) AS t;
+
+　　SELECT count(DISTINCT num) AS count FROM test_a;
+
+　　它俩结果一样，都是5；只是一个是子查询（嵌套），一个是内置函数 distinct（）；
+
+
+数据库结构(String), 0(Integer), 0(Integer), 2022-04-02 18:16:00.0(Timestamp), 0(Integer), 0.0(Double), 282(Integer)
+2022-04-08 23:41:52.060 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.061 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.061 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.061 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:41:52.062 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.063 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.064 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.064 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.065 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 281(Integer)
+2022-04-08 23:41:52.065 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.066 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.066 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 281(Integer)
+2022-04-08 23:41:52.067 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.068 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.068 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 175(Integer), 东航波音737客机坠毁：中外空难赔偿机制为何并不统一(String), 随着民航当局宣布中国东方航空MU5735客机全体乘客和机组人员遇难，善后问题成为焦点。
+
+东航MU5735客机3月21日下午从云南昆明飞往广东广州途中，坠落广西梧州藤县琅南镇莫埌村附近山谷。26日深夜，中国国务院委派的应急处置指挥部宣布机上123名乘客和九名机组人员全部遇难。MU5735空难由此成为自1994年以来中国本土最严重空难。
+
+事故发生超过一个星期，应急处置指挥部表示，全部132人的基因比对经已完成，机上两个&ldquo;黑匣子&rdquo;飞行纪录仪的译码工作也在推进。中国银行保险监督管理委员会星期三（3月30日）表示，部分保险公司已开始向遇难人员家属支付赔偿。
+
+随着理赔程序展开，中国空难赔偿金额水平再次成为讨论焦点。国际空难赔偿实际上并无统一标准，但航空专业律师对BBC中文指出，把国际航班事故赔偿准则引入到国内航班赔偿当中，对家属有利。
+
+中国当局证实MU5735所有乘客与机员遇难　第二部黑匣子被发现
+东航坠机：寻获更多残骸　美国已获邀参与调查
+分析指MU5735空难可排除天气和鸟击因素
+&ldquo;黑匣子&rdquo;：一个可能曾救你一命的发明
+
+视频加注文字，
+赶到坠机现场的家属：&ldquo;只要看到生还的希望就行。&rdquo;
+
+空难赔偿有国际标准吗？
+航空专家经常强调，空难发生概率远低于陆上交通事故&mdash;&mdash;荷兰航空咨询公司To70资料显示，2017年，全球并无任何客机撞毁，号称有史以来民用航空最安全的一年；2021年，全球共有81人死于四起空难，同期全球车祸致死人数130万&mdash;&mdash;因此与空难相关的人命伤亡赔偿相比于车祸赔偿，并不常见。
+
+1999年，联合国国际民航组织（ICAO）成员国在加拿大蒙特利尔通过并签署《统一国际航空运输某些规则的公约》，通称1999年《蒙特利尔公约》（Montreal Convention），以图取代包括1929年在波兰华沙签署的同名公约，和多份同类型协定，统一世界航空事故赔偿标准。
+
+中国全国人民代表大会常务委员会2005年2月28日批准《蒙特利尔公约》在中国大陆及澳门特区生效；中国国务院2006年9月7日同意公约适用范围扩展至香港特区。
+
+然而，这并不代表《蒙特利尔公约》成为了一切航空事故的赔偿标准。公约第一条规定，&ldquo;本公约适用于所有以航空器运送人员、行李或者货物而收取报酬的国际运输&rdquo;，但&ldquo;在一个当事国的领土内两个地点之间的运输，而在另一国的领土内没有约定的经停地点的，不是国际运输&rdquo;。
+
+换言之，国内航班事故旅客赔偿标准，完全依赖当事国家或地区的法律规章。
+
+北京大兴国际机场的国内登机与国际登机指示牌
+图像来源，AFP
+图像加注文字，
+国内与国际航班事故适用不同赔偿规则。
+
+中国现行《国内航空运输承运人赔偿责任限额规定》于2006年颁布，规章法源为《民用航空法》。当中规定，&ldquo;国内航空运输承运人&rdquo;&mdash;&mdash;即航空公司&mdash;&mdash;&ldquo;对每名旅客的赔偿责任限额为人民币40万元&rdquo;；&ldquo;旅客自行向保险公司投保航空旅客人身意外保险的，此项保险金额的给付，不免除或者减少承运人应当承担的赔偿责任&rdquo;。
+
+在《民航法》与《蒙特利尔公约》共同作用下，航空公司一般会投保&ldquo;旅客法定责任保险&rdquo;，又称&ldquo;航空责任险&rdquo;，把法定赔偿责任转嫁至保险公司。
+
+詹姆斯&middot;希利&mdash;普拉特（James Healy-Pratt）是英国资深国际航空律师，并不时受英格兰与威尔士法院体系委任为死因裁判官（coroner），聆讯案件过百。他透过电邮对BBC中文指出，国内航空事故赔偿标准确实处处不同，很多时受到当地生活开销水平与国内生产总值（GDP）影响。
+
+希利&mdash;普拉特说：&ldquo;把《蒙特利尔公约》元素采纳到中国国内航空运输规范当中将对家属更为公平。欧洲等地已经是这样做。&rdquo;
+
+镜头回转到2014年马来西亚航空MH370航班失踪事件发生后，希利&mdash;普拉特曾在BBC采访中说：&ldquo;在空难中，家属并未得到平等或公正的对待。（赔偿多寡）视乎个别国家如何适用其自身法律。&rdquo;
+
+他后来对美国《时代》杂志评论说，每逢发生空难，向遇难者家属解释为何赔偿金额人人不同，从来都是个问题，尤其是当事发前最后一刻大家都在经历着相同事情的时候。
+
+东航客机坠毁地点
+中国大陆空难赔偿标准比外国为低吗？
+东航MU5735空难发生后，40万元人民币（6.29万美元）这个限额成为了焦点之一。但多家中国媒体指出，以2010年黑龙江伊春空难为例，航空公司赔偿金额实际高于法定限额，且为中国民航迄今为止空难赔偿的最高额。
+
+官方新华社当时报道，涉事的河南航空&ldquo;考虑到2006年以来全国城镇居民人均可支配收入的累计增长幅度&rdquo;而调高赔偿金额，加上遇难旅客家属生活补贴和抚慰金等，每位遇难旅客的赔偿标准总共为96万元人民币。
+
+中国媒体谈论&ldquo;40万元&rdquo;限额时，一方面强调民间存在提高金额的呼声，一方面也强调《国内航空运输承运人赔偿责任限额规定》曾数度调整赔偿限额。实际上，《蒙特利尔公约》亦然。
+
+在最近一次于2019年12月28日的修订中，《蒙特利尔公约》所订旅客死亡或伤害赔偿限额为国际货币基金组织特别提款权（IMF SDR）128821个单位（17.82万美元；113.19万元人民币），是中国国内航班赔偿责任限额的2.83倍。
+
+詹姆斯&middot;希利&mdash;普拉特律师去年11月在其律师事务所网站上与另一位合伙人联合撰文指出，美国法院就空难死者的平均判赔金额为全球最高，达520万美元。&ldquo;这基于多个因素，包括获取司法的容易程度，陪审团，以及认可无限量补偿丧亲所带来的情感伤痛的文化。&rdquo;
+
+文章还罗列数据指出，亚洲国家判赔金额最低，约为50万美元；英国略高于欧盟，但两者均不高于200万美元。希利&mdash;普拉特对BBC中文记者说，在亚洲国家当中，新加坡与日本的赔偿水平比中国&ldquo;慷慨&rdquo;。
+
+青岛流亭机场上的中国东方航空客机
+图像来源，FUTURE PUBLISHING / GETTY IMAGES
+图像加注文字，
+航空公司一般会投保&ldquo;航空责任险&rdquo;以应付法定赔偿责任。
+
+《中国新闻周刊》旗下《中国慈善家》杂志引述曾代表部分MH370家属，中国政法大学航空与空间法研究中心研究员张起淮律师说：&ldquo;40万元的赔偿限额至今没有提高，也没被废止，但空难事故已经不再按照这一标准执行。如果按这一标准执行，还不如一个地面交通事故的赔偿。&rdquo;
+
+张起淮主张，旅客赔偿责任限额至少要提高至100万元人民币。
+
+《中国慈善家》杂志又指出，航空意外险是空难罹难者家属及受伤乘客获得赔偿的主要途径。张起淮律师说：&ldquo;随着人们对保险认知的提高，一般情况下都会买一份航意险，一些单位给员工订票，也会主动购买航意险。&rdquo;
+
+在台湾与香港，航空意外保障一般是作为旅行平安险（旅游保险）一部分，只要证明受保人以乘客身份搭乘经核准的客机，飞行途中所遇事故即以意外理赔。希利&mdash;普拉特对BBC中文指出，这类保险在死亡事故中赔偿一般不高，应付严重受伤救治、医疗专机遣返等费用更为有用。
+
+中国银保监会3月30日通报，人身保险方面，相关保险公司根据客户报案情况，积极开展保险理赔工作，目前已有11家公司向遇难人员家属支付14笔赔款，金额合计1485万元。
+
+但无论如何，这都是旅客自行投保保障自己，而非航空公司的担责赔偿。(String), 0(Integer), 0(Integer), 2022-04-01 14:15:46.0(Timestamp), 2(Integer), 0.0(Double), 281(Integer)
+2022-04-08 23:41:52.069 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.070 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.070 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.071 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-04-08 23:41:52.072 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.072 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.073 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.073 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.073 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 280(Integer)
+2022-04-08 23:41:52.074 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.074 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.074 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 280(Integer)
+2022-04-08 23:41:52.075 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.076 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.076 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 149(Integer), 事务(String), 事务的4个特性，包括原子性、一致性、隔离性、持久性。(String), 0(Integer), 0(Integer), 2019-05-20 17:41:30.0(Timestamp), 16(Integer), 1755.2095150145426(Double), 280(Integer)
+2022-04-08 23:41:52.077 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.077 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.077 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.078 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-04-08 23:41:52.079 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.079 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.080 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.080 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.080 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 277(Integer)
+2022-04-08 23:41:52.081 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.082 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.082 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 277(Integer)
+2022-04-08 23:41:52.083 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.083 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.084 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 149(Integer), Spring Cache(String), Spring Cache RedisCacheManager(String), 0(Integer), 0(Integer), 2019-05-17 17:06:54.0(Timestamp), 39(Integer), 1752.5797835966168(Double), 277(Integer)
+2022-04-08 23:41:52.084 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.085 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.085 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.085 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 149(Integer)
+2022-04-08 23:41:52.086 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.087 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findEntityLikeCount] 方法
+2022-04-08 23:41:52.088 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.DiscussPostServiceImpl.updateCommentCount] 方法
+2022-04-08 23:41:52.088 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==>  Preparing: select count(id) from comment where status = 0 and entity_id = ?
+2022-04-08 23:41:52.088 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - ==> Parameters: 276(Integer)
+2022-04-08 23:41:52.089 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.CommentMapper.selectCommentCount : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.090 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==>  Preparing: select `id`, `user_id`, `title`, `content`, `type`, `status`, `create_time`, `comment_count`, `score` from discuss_post where id=?
+2022-04-08 23:41:52.090 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - ==> Parameters: 276(Integer)
+2022-04-08 23:41:52.091 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ c.cgc.dao.DiscussPostMapper.selectDiscussPostById : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.091 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==>  Preparing: update discuss_post set user_id=?, `title`=?, `content`=?, `type`=?, `status`=?, `create_time`=?, `comment_count`=?, `score`=? where id = ?
+2022-04-08 23:41:52.091 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - ==> Parameters: 149(Integer), 新人报道(String), 新人报道，请多关照！(String), 0(Integer), 0(Integer), 2019-05-17 15:50:18.0(Timestamp), 6(Integer), 1751.806179973984(Double), 276(Integer)
+2022-04-08 23:41:52.092 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.DiscussPostMapper.updateDiscussPost : 137 ] - <==    Updates: 1
+2022-04-08 23:41:52.158 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:41:52.158 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:41:52.158 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:41:52.159 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:41:52.159 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:41:52]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:41:52.160 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:41:52.160 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:41:52.161 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:42:00.045 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:42:00]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:42:00.046 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:42:00.046 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:42:00.048 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:42:00.048 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:42:00]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:42:00.048 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:42:00.049 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:42:00.049 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:42:00.051 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:42:00]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:42:00.052 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:42:00.052 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:42:00.054 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:42:00.054 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:42:00]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findUserLikeCount] 方法
+2022-04-08 23:42:00.222 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:42:00]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:42:00.223 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:42:00.223 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:42:00.225 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:42:00.225 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:42:00]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:42:00.225 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:42:00.226 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:42:00.227 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:49:39.013 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-04-08 23:49:39.020 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-04-08 23:49:42.604 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 21576 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-04-08 23:49:42.608 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-04-08 23:49:42.609 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-04-08 23:49:43.810 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:49:43.811 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-04-08 23:49:43.811 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-08 23:49:43.900 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-04-08 23:49:44.860 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:49:44.890 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.835 seconds (JVM running for 4.075)
+2022-04-08 23:49:49.551 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-08 23:49:49.569 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:49:49]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:49:49.584 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-04-08 23:49:49.673 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-04-08 23:49:49.678 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:49:49.697 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:49:49.713 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:49:49.718 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:49:49]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:49:49.718 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:49:49.718 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:49:49.720 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:49:49.731 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:49:49]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:49:49.732 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:49:49.732 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:49:49.733 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:49:49.734 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:49:49]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findUserLikeCount] 方法
+2022-04-08 23:49:50.865 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:49:50]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:49:50.867 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:49:50.867 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:49:50.869 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:49:50.869 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:49:50]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:49:50.870 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:49:50.871 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:49:50.873 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:50:14.080 [ http-nio-8080-exec-5 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:14]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:50:14.081 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:50:14.081 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:50:14.082 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:14]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:50:14.083 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:50:14.084 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:50:14.084 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:50:14.085 [ http-nio-8080-exec-5 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:14]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:50:14.085 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:50:14.085 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:50:14.086 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:50:14.086 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:14]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:50:14.086 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:50:14.087 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:50:14.088 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:50:14.088 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.634 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:50:23.635 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:50:23.635 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:50:23.637 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.638 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:50:23.638 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:50:23.638 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:50:23.639 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.640 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:50:23.640 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:50:23.640 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:50:23.641 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.643 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.LikeServiceImpl.findUserLikeCount] 方法
+2022-04-08 23:50:23.711 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:50:23.711 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:50:23.712 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:50:23.713 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.714 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:50:23.714 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:50:23.715 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:50:23.716 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.746 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:50:23.747 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:50:23.747 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:50:23.749 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.749 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:50:23.750 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:50:23.751 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:50:23.753 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.758 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:50:23.759 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:50:23.760 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:50:23.761 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:50:23.762 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:50:23]  : [0:0:0:0:0:0:0:1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:50:23.762 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:50:23.762 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:50:23.764 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:13.269 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-04-08 23:54:13.275 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-04-08 23:54:17.633 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 17532 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-04-08 23:54:17.635 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-04-08 23:54:17.636 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-04-08 23:54:18.721 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:54:18.721 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-04-08 23:54:18.721 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-08 23:54:18.803 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-04-08 23:54:19.768 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:54:19.795 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.776 seconds (JVM running for 3.835)
+2022-04-08 23:54:21.565 [ http-nio-8080-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-08 23:54:21.582 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:21]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:21.597 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2022-04-08 23:54:21.683 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2022-04-08 23:54:21.688 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:21.705 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:21.722 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:21.727 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:21]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:21.728 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:21.728 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:21.729 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:21.740 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:21]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:21.741 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:21.741 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:21.743 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:21.744 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:21]  : [127.0.0.1]访问了 [com.cgc.service.impl.LikeServiceImpl.findUserLikeCount] 方法
+2022-04-08 23:54:22.887 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:22]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:22.888 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:22.889 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:22.891 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:22.892 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:22]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:22.892 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:22.893 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:22.895 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:22.933 [ http-nio-8080-exec-5 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:22]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:22.934 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:22.935 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:22.936 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:22.937 [ http-nio-8080-exec-5 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:22]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:22.938 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:22.938 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:22.940 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:22.952 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:22]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:22.953 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:22.954 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:22.956 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:22.956 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:22]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:22.957 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:22.957 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:22.959 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.298 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:25.299 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:25.299 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:25.301 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.302 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:25.303 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:25.304 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:25.306 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.308 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.FollowServiceImpl.follow] 方法
+2022-04-08 23:54:25.596 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:25.596 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:25.597 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:25.599 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.600 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:25.600 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:25.600 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:25.602 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.603 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:25.603 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:25.604 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:25.605 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.606 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.LikeServiceImpl.findUserLikeCount] 方法
+2022-04-08 23:54:25.672 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:25.673 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:25.673 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:25.675 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.676 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:25.677 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:25.678 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:25.680 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.704 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:25.704 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:25.705 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:25.706 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.707 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:25.707 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:25.707 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:25.709 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.731 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:25.732 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:25.733 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:25.734 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:25.735 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:25]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:25.735 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:25.736 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:25.737 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.203 [ http-nio-8080-exec-10 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:55.204 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:55.205 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:55.207 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.207 [ http-nio-8080-exec-10 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:55.208 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:55.208 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:55.210 [ http-nio-8080-exec-10 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.211 [ http-nio-8080-exec-10 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.FollowServiceImpl.follow] 方法
+2022-04-08 23:54:55.247 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:55.248 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:55.249 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:55.251 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.251 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:55.252 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:55.252 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:55.253 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.254 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:55.255 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:55.255 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:55.257 [ http-nio-8080-exec-1 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.258 [ http-nio-8080-exec-1 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.LikeServiceImpl.findUserLikeCount] 方法
+2022-04-08 23:54:55.322 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:55.322 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:55.323 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:55.324 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.324 [ http-nio-8080-exec-3 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:55.325 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:55.325 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:55.326 [ http-nio-8080-exec-3 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.371 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:55.372 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:55.373 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:55.375 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.375 [ http-nio-8080-exec-7 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:55.376 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:55.376 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:55.379 [ http-nio-8080-exec-7 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.389 [ http-nio-8080-exec-5 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:55.389 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:55.390 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:55.391 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:55.391 [ http-nio-8080-exec-5 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:55]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:55.392 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:55.392 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:55.394 [ http-nio-8080-exec-5 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.412 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:56.413 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:56.414 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:56.416 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.416 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:56.416 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:56.417 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:56.418 [ http-nio-8080-exec-8 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.419 [ http-nio-8080-exec-8 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.FollowServiceImpl.follow] 方法
+2022-04-08 23:54:56.439 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:56.439 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:56.440 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:56.442 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.442 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:56.443 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:56.443 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:56.444 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.445 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:56.445 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:56.445 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:56.446 [ http-nio-8080-exec-6 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.446 [ http-nio-8080-exec-6 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.LikeServiceImpl.findUserLikeCount] 方法
+2022-04-08 23:54:56.507 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:56.507 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:56.508 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:56.509 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.510 [ http-nio-8080-exec-4 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:56.510 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:56.510 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:56.511 [ http-nio-8080-exec-4 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.541 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:56.542 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:56.542 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:56.543 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.544 [ http-nio-8080-exec-2 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:56.544 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:56.545 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:56.546 [ http-nio-8080-exec-2 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.566 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findLoginTicket] 方法
+2022-04-08 23:54:56.567 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==>  Preparing: select id, user_id, ticket, status, expired from login_ticket where ticket = ?
+2022-04-08 23:54:56.567 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - ==> Parameters: d5d14106a08d4379903739317c9cb681(String)
+2022-04-08 23:54:56.569 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.LoginTicketMapper.selectByTicket : 137 ] - <==      Total: 1
+2022-04-08 23:54:56.570 [ http-nio-8080-exec-9 ] - [ INFO  ] [ com.cgc.aspect.ServiceLogAspect : 36 ] - [2022-04-08 23:54:56]  : [127.0.0.1]访问了 [com.cgc.service.impl.UserServiceImpl.findUserById] 方法
+2022-04-08 23:54:56.571 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==>  Preparing: select `id`, `username`, `password`, `salt`, `email`, `type`, `status`, `activation_code`, `header_url`, `create_time` from user where id = ?
+2022-04-08 23:54:56.571 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - ==> Parameters: 175(Integer)
+2022-04-08 23:54:56.572 [ http-nio-8080-exec-9 ] - [ DEBUG ] [ com.cgc.dao.UserMapper.selectUserById : 137 ] - <==      Total: 1
+2022-04-08 23:59:16.911 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 350 ] - HikariPool-1 - Shutdown initiated...
+2022-04-08 23:59:16.918 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 352 ] - HikariPool-1 - Shutdown completed.
+2022-04-08 23:59:20.289 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 55 ] - Starting CommunityApplication using Java 1.8.0_282 on DESKTOP-H4NF298 with PID 9892 (E:\IDEAWorkPlace\community\target\classes started by xingchen in E:\IDEAWorkPlace\community)
+2022-04-08 23:59:20.291 [ main ] - [ DEBUG ] [ com.cgc.CommunityApplication : 56 ] - Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-04-08 23:59:20.292 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 640 ] - No active profile set, falling back to 1 default profile: "default"
+2022-04-08 23:59:21.425 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:59:21.426 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2022-04-08 23:59:21.426 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-08 23:59:21.508 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2022-04-08 23:59:22.450 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8080"]
+2022-04-08 23:59:22.477 [ main ] - [ INFO  ] [ com.cgc.CommunityApplication : 61 ] - Started CommunityApplication in 2.672 seconds (JVM running for 3.743)
