@@ -8,7 +8,7 @@ function follow() {
         // 关注TA
         $.post(
             "/follow",
-            {"entityType": 1, "entityId": $(btn).prev().val()},
+            {"entityType": 3, "entityId": $(btn).prev().val()},
             function (data) {
                 data = $.parseJSON(data);
                 if (data.code === 0) {
@@ -23,7 +23,7 @@ function follow() {
         // 取消关注
         $.post(
             "/follow",
-            {"entityType": 1, "entityId": $(btn).prev().val()},
+            {"entityType": 3, "entityId": $(btn).prev().val()},
             function (data) {
                 data = $.parseJSON(data);
                 if (data.code === 0) {

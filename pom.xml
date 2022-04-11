@@ -107,6 +107,14 @@
             <version>2.6.6</version>
         </dependency>
 
+        <!--kafka相关-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <!--这里省略版本，因为使用了springboot，会自动引入正确的版本   -->
+        </dependency>
+
+
 
     </dependencies>
 

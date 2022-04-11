@@ -3,6 +3,8 @@ server:
   servlet:
     context-path: /
 
+
+
 spring:
 
   thymeleaf:
@@ -35,6 +37,17 @@ spring:
     host: 127.0.0.1
     port: 6379
     timeout: 3000
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      # 配置kafka的组id，可以在kafka的配置文件consumer.properties中找到
+      group-id: test-consumer-group
+      # 设置是否自动提交
+      enable-auto-commit: true
+      # 设置自动提交频率
+      auto-commit-interval: 3000
+
+
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -43,24 +56,7 @@ mybatis:
     map-underscore-to-camel-case: true
     use-generated-keys: true
 
-#  # kafka
-#  kafka:
-#    bootstrap-servers: localhost:9092
-#    consumer:
-#      group-id: test-consumer-group
-#      enable-auto-commit: true
-#      auto-commit-interval: 3000 #ms
-#  # elasticsearch
-#  data:
-#    elasticsearch:
-#      cluster-name: nowcoder
-#      cluster-nodes: 127.0.0.1:9300
-#
-#
-## 加密参数
-#jasypt:
-#  encryptor:
-#    password: test
+
 
 # 配置日志级别
 logging:

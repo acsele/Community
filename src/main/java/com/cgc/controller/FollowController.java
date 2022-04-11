@@ -1,7 +1,9 @@
 package com.cgc.controller;
 
+import com.cgc.entity.Event;
 import com.cgc.entity.Page;
 import com.cgc.entity.User;
+import com.cgc.event.EventProducer;
 import com.cgc.service.FollowService;
 import com.cgc.service.UserService;
 import com.cgc.util.CommunityConstant;
@@ -26,6 +28,9 @@ public class FollowController implements CommunityConstant {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
     /**
      * 用户点击关注或者取消关注
      *
@@ -39,6 +44,15 @@ public class FollowController implements CommunityConstant {
         User user = hostHolder.getUser();
         //完成关注的数据相关操作
         followService.follow(user.getId(), entityType, entityId);
+
+        //系统通知：关注业务完成，通过系统通知被关注用户
+        Event event = new Event()
+                .setTopic(TOPIC_FOLLOW)
+                .setUserId(user.getId())
+                .setEntityType(entityType)
+                .setEntityId(entityId)
+                .setEntityUserId(entityId);
+        eventProducer.releaseEvent(event);
 
         return CommunityUtil.genJson(0, "操作成功");
     }

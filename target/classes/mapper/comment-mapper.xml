@@ -18,6 +18,13 @@
         limit #{offset},#{limit}
     </select>
 
+    <select id="selectCommentById" resultType="com.cgc.entity.Comment">
+        select
+        <include refid="selectFields"/>
+        from comment
+        where id=#{commentId}
+    </select>
+
     <select id="selectCommentCount" resultType="int">
         select count(id)
         from comment

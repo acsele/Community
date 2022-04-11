@@ -12,6 +12,18 @@ public interface CommunityConstant {
     //点击记住我之后的凭证超时时间
     int REMEMBER_EXPIRED_SECONDS = 3600 * 12 * 100;
 
-    //关注相关
-    int ENTITY_TYPE_USER=1;
+    //关注、评论、点赞相关
+    int ENTITY_TYPE_COMMENT=2;
+    int ENTITY_TYPE_POST=1;
+    int ENTITY_TYPE_USER=3;  //只在关注相关业务中使用，数据只会存在redis中
+
+    //kafka相关（主题名）
+    String TOPIC_COMMENT="comment";
+    String TOPIC_Like="like";
+    String TOPIC_FOLLOW="follow";
+    String TOPIC_PUBLISH="publish";
+
+    //系统用户id
+    int SYSTEM_ID=1;
+
 }

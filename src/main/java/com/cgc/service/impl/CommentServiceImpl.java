@@ -16,13 +16,16 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     private CommentMapper commentMapper;
 
-    @Autowired
-    private DiscussPostMapper discussPostMapper;
-
     @Override
     public List<Comment> findCommentsById(int type, int id, int limit, int offset) {
         return commentMapper.selectCommentsById(type, id, limit, offset);
     }
+
+    @Override
+    public Comment findCommentById(int commentId) {
+        return commentMapper.selectCommentById(commentId);
+    }
+
 
     @Override
     public int findCommentCount(int id) {

@@ -20,6 +20,8 @@ public interface CommentMapper {
      */
     List<Comment> selectCommentsById(int type, int id, int limit, int offset);
 
+    Comment selectCommentById(int commentId);
+
     //查询总评论数，用于计算分页数(我们只对帖子的评论做分页不对回复做分页，所以查询的一定是帖子的评论数量，不需要去查回复数量）
     int selectCommentCount(int id);
 
