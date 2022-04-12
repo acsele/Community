@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface MessageService {
 
+    //私信相关
+
     //查询最新消息列表（用于显示在私信列表页面）
     List<Message> findLatestMessages(int userId, int limit, int offset);
 
@@ -26,5 +28,20 @@ public interface MessageService {
 
     //读取消息
     int readMessage(List<Message> ids);
+
+
+    //系统通知相关
+
+    //查询某个主题的全部通知数量
+    int findNoticeCount(int userId, String topic);
+
+    //查询未读通知数量
+    int findUnReadNoticeCount(int userId, String topic);
+
+    //查询通知列表
+    List<Message> findNoticeList(int userId, String topic, int limit, int offset);
+
+    //查询某个主题下的最新通知
+    Message findLatestNotice(int userId, String topic);
 
 }

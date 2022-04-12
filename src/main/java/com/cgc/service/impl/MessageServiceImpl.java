@@ -68,9 +68,29 @@ public class MessageServiceImpl implements MessageService {
                 }
             }
         }
-        if(!ids.isEmpty()){
+        if (!ids.isEmpty()) {
             return messageMapper.updateStatusOfMessage(ids, 1);
         }
         return 0;
+    }
+
+    @Override
+    public int findNoticeCount(int userId, String topic) {
+        return messageMapper.selectNoticeCount(userId, topic);
+    }
+
+    @Override
+    public int findUnReadNoticeCount(int userId, String topic) {
+        return messageMapper.selectUnReadNoticeCount(userId, topic);
+    }
+
+    @Override
+    public List<Message> findNoticeList(int userId, String topic, int limit, int offset) {
+        return messageMapper.selectNotices(userId, topic, limit, offset);
+    }
+
+    @Override
+    public Message findLatestNotice(int userId, String topic) {
+        return messageMapper.selectLatestNotice(userId, topic);
     }
 }

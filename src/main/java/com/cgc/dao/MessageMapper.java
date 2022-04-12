@@ -8,6 +8,8 @@ import java.util.List;
 @Mapper
 public interface MessageMapper {
 
+    //私信相关
+
     //查询当前用户的会话列表，每个会话只查最新的一条消息（用于私信列表显示）
     List<Message> selectLatestMessages(int userId, int limit, int offset);
 
@@ -29,5 +31,19 @@ public interface MessageMapper {
     //新增消息
     int insertMessage(Message message);
 
+
+    //通知相关
+
+    //查询通知列表
+    List<Message> selectNotices(int userId, String topic, int limit, int offset);
+
+    //查询所有通知数量（用于支持分页）
+    int selectNoticeCount(int userId, String topic);
+
+    //查询未读通知数量
+    int selectUnReadNoticeCount(int userId, String topic);
+
+    //查询最新通知内容
+    Message selectLatestNotice(int userId, String topic);
 
 }

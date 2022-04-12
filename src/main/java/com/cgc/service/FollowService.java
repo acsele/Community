@@ -7,12 +7,12 @@ public interface FollowService {
 
     /**
      * 关注某个用户：当用户点击关注（或取消关注）按钮时执行该方法
-     *
-     * @param followUserId         点关注的人的userId
+     *  @param followUserId         点关注的人的userId
      * @param beFollowedEntityType 被关注的实体类型
      * @param beFollowedEntityId   被关注的实体的id
+     * @return
      */
-    void follow(int followUserId, int beFollowedEntityType, int beFollowedEntityId);
+    boolean follow(int followUserId, int beFollowedEntityType, int beFollowedEntityId);
 
     /**
      * 查询关注列表（支持分页）

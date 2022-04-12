@@ -42,4 +42,27 @@ class MessageMapperTest {
         message.setConversationId("111_112");
         System.out.println(messageMapper.insertMessage(message));
     }
+
+    @Test
+    void selectNotices() {
+        System.out.println(messageMapper.selectNotices(175,"like",5,0));
+    }
+
+    @Test
+    void selectNoticeCount() {
+        System.out.println(messageMapper.selectNoticeCount(175,"like"));
+    }
+
+    @Test
+    void selectUnReadNoticeCount() {
+        System.out.println(messageMapper.selectUnReadNoticeCount(175,"like"));
+    }
+
+    @Test
+    void selectLatestNotice() {
+        System.out.println(messageMapper.selectLatestNotice(175,"like"));
+        System.out.println(messageMapper.selectLatestNotice(175,"comment"));
+        System.out.println(messageMapper.selectLatestNotice(175,"follow"));
+
+    }
 }

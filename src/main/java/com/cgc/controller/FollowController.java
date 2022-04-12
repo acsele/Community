@@ -10,6 +10,7 @@ import com.cgc.util.CommunityConstant;
 import com.cgc.util.CommunityUtil;
 import com.cgc.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +32,9 @@ public class FollowController implements CommunityConstant {
     @Autowired
     private EventProducer eventProducer;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
     /**
      * 用户点击关注或者取消关注
      *
@@ -42,18 +46,18 @@ public class FollowController implements CommunityConstant {
     @ResponseBody
     public String follow(int entityType, int entityId) {
         User user = hostHolder.getUser();
+
         //完成关注的数据相关操作
-        followService.follow(user.getId(), entityType, entityId);
-
-        //系统通知：关注业务完成，通过系统通知被关注用户
-        Event event = new Event()
-                .setTopic(TOPIC_FOLLOW)
-                .setUserId(user.getId())
-                .setEntityType(entityType)
-                .setEntityId(entityId)
-                .setEntityUserId(entityId);
-        eventProducer.releaseEvent(event);
-
+        if (followService.follow(user.getId(), entityType, entityId)) {
+            //系统通知：关注业务完成，通过系统通知被关注用户(只有关注时通知，取消关注不通知）
+            Event event = new Event()
+                    .setTopic(TOPIC_FOLLOW)
+                    .setUserId(user.getId())
+                    .setEntityType(entityType)
+                    .setEntityId(entityId)
+                    .setEntityUserId(entityId);
+            eventProducer.releaseEvent(event);
+        }
         return CommunityUtil.genJson(0, "操作成功");
     }
 

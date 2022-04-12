@@ -4,6 +4,7 @@ import com.cgc.annotation.LoginRequired;
 import com.cgc.entity.User;
 import com.cgc.service.FollowService;
 import com.cgc.service.LikeService;
+import com.cgc.service.MessageService;
 import com.cgc.service.UserService;
 import com.cgc.util.CommunityConstant;
 import com.cgc.util.CommunityUtil;
@@ -44,6 +45,9 @@ public class UserController implements CommunityConstant {
     private FollowService followService;
 
     @Autowired
+    private MessageService messageService;
+
+    @Autowired
     private HostHolder hostHolder;
 
     /**
@@ -53,7 +57,11 @@ public class UserController implements CommunityConstant {
      */
     @LoginRequired
     @RequestMapping("/setting")
-    public String toSettingPage() {
+    public String toSettingPage(Model model) {
+        User user = hostHolder.getUser();
+        model.addAttribute("messageCount", messageService.findUnReadNoticeCount(user.getId(), null)
+                + messageService.findUnreadMessagesCount(user.getId(), null));
+
         return "/site/setting";
     }
 
@@ -144,6 +152,8 @@ public class UserController implements CommunityConstant {
         model.addAttribute("fansCount", followService.findFansCount(ENTITY_TYPE_USER, userId));
         model.addAttribute("followCount", followService.findFollowCount(userId, ENTITY_TYPE_USER));
         model.addAttribute("isFollowing", followService.isFollowing(loginUser == null ? null : loginUser.getId(), ENTITY_TYPE_USER, userId));
+        model.addAttribute("messageCount", messageService.findUnReadNoticeCount(user.getId(), null)
+                + messageService.findUnreadMessagesCount(user.getId(), null));
 
         return "/site/profile";
     }

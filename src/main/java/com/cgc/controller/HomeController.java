@@ -2,9 +2,12 @@ package com.cgc.controller;
 
 import com.cgc.entity.DiscussPost;
 import com.cgc.entity.Page;
+import com.cgc.entity.User;
 import com.cgc.service.DiscussPostService;
 import com.cgc.service.LikeService;
+import com.cgc.service.MessageService;
 import com.cgc.service.UserService;
+import com.cgc.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,8 +31,15 @@ public class HomeController {
     @Autowired
     private LikeService likeService;
 
-    @RequestMapping({"/index","/"})
+    @Autowired
+    private MessageService messageService;
+
+    @Autowired
+    private HostHolder hostHolder;
+
+    @RequestMapping({"/index", "/"})
     public String getIndexPage(Model model, Page page) {
+        User user = hostHolder.getUser();
 
         //分页显示
         page.setRows(discussPostService.findDiscussPostRows(0));
@@ -43,12 +53,14 @@ public class HomeController {
                 Map<String, Object> map = new HashMap<String, Object>();
                 map.put("post", discussPost);
                 map.put("user", userService.findUserById(discussPost.getUserId()));
-                map.put("likeCount",likeService.findEntityLikeCount(1,discussPost.getId()));
+                map.put("likeCount", likeService.findEntityLikeCount(1, discussPost.getId()));
                 map.put("commentCount", discussPostService.updateCommentCount(discussPost.getId()));
                 discussPosts.add(map);
             }
         }
         model.addAttribute("discussPosts", discussPosts);
+        model.addAttribute("messageCount", messageService.findUnReadNoticeCount(user.getId(), null)
+                + messageService.findUnreadMessagesCount(user.getId(), null));
         return "index";
     }
 

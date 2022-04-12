@@ -6,8 +6,6 @@ import com.cgc.service.UserService;
 import com.cgc.util.CommunityConstant;
 import com.cgc.util.HostHolder;
 import com.cgc.util.RedisKeyUtil;
-import org.apache.catalina.Host;
-import org.apache.commons.lang3.RandomUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
@@ -32,28 +30,31 @@ public class FollowServiceImpl implements FollowService, CommunityConstant {
      * 关注某个用户：当用户点击关注（或取消关注）按钮时都是执行该方法
      * 采用redis中的zSet数据结构，因为zSet中的每个元素都是value score，刚好对应userId  time
      * 先根据传入的参数查询是否存在，如果存在就删除，如果不存在就添加（以此通过一个方法即实现关注功能，又实现取消关注功能）
-     *
-     * @param followUserId         点关注的人的userId
+     *  @param followUserId         点关注的人的userId
      * @param beFollowedEntityType 被关注的实体类型
      * @param beFollowedEntityId   被关注的实体的id
+     * @return boolean 关注时返回true，取消关注返回false
      */
     @Override
-    public void follow(int followUserId, int beFollowedEntityType, int beFollowedEntityId) {
+    public boolean follow(int followUserId, int beFollowedEntityType, int beFollowedEntityId) {
         //followList是关注着的关注列表，fansList是被关注者的粉丝列表
         String followListKey = RedisKeyUtil.genFollowListKey(beFollowedEntityType, followUserId);
         String fansListKey = RedisKeyUtil.genFansListKey(beFollowedEntityType, beFollowedEntityId);
 
+        Object isMember = redisTemplate.opsForZSet().rank(followListKey, beFollowedEntityId);
+
         redisTemplate.execute(new SessionCallback() {
             @Override
             public Object execute(RedisOperations operations) throws DataAccessException {
-                Object isMember = redisTemplate.opsForZSet().rank(followListKey, beFollowedEntityId);
 
                 //事务开始标志
                 operations.multi();
                 if (isMember == null) {
+                    //关注
                     redisTemplate.opsForZSet().add(followListKey, beFollowedEntityId, System.currentTimeMillis()); //把被关注者加入关注着的关注列表
                     redisTemplate.opsForZSet().add(fansListKey, followUserId, System.currentTimeMillis()); //把关注者加入被关注者的粉丝列表
                 } else {
+                    //取消关注
                     redisTemplate.opsForZSet().remove(followListKey, beFollowedEntityId);
                     redisTemplate.opsForZSet().remove(fansListKey, followUserId);
                 }
@@ -61,8 +62,7 @@ public class FollowServiceImpl implements FollowService, CommunityConstant {
                 return operations.exec();
             }
         });
-
-
+        return isMember == null;
     }
 
     /**
