@@ -114,12 +114,12 @@
             <!--这里省略版本，因为使用了springboot，会自动引入正确的版本   -->
         </dependency>
 
-
+        <!--ElasticSearch相关-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
 
     </dependencies>
-
-    <build>
-
-    </build>
 
 </project>

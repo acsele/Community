@@ -4,10 +4,7 @@ import com.cgc.entity.Comment;
 import com.cgc.entity.DiscussPost;
 import com.cgc.entity.Page;
 import com.cgc.entity.User;
-import com.cgc.service.CommentService;
-import com.cgc.service.DiscussPostService;
-import com.cgc.service.LikeService;
-import com.cgc.service.UserService;
+import com.cgc.service.*;
 import com.cgc.util.CommunityConstant;
 import com.cgc.util.CommunityUtil;
 import com.cgc.util.HostHolder;
@@ -40,6 +37,9 @@ public class DiscussPostController implements CommunityConstant {
     @Autowired
     private CommentService commentService;
 
+    @Autowired
+    private ElasticSearchService elasticSearchService;
+
     //添加帖子
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
@@ -50,6 +50,7 @@ public class DiscussPostController implements CommunityConstant {
         }
         DiscussPost discussPost = new DiscussPost(user.getId(), title, content, 0, 0, new Date(), 0, 0);
         discussPostService.addDiscussPost(discussPost);
+        elasticSearchService.saveDiscussPost(discussPost);
         return CommunityUtil.genJson(200, "发布成功！");
     }
 

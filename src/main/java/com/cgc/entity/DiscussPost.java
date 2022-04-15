@@ -3,21 +3,42 @@ package com.cgc.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
 
 
 @NoArgsConstructor
+@Document(indexName = "discusspost")
 public class DiscussPost {
 
+    @Field(type = FieldType.Integer)
     private int id;
+
+    @Field(type = FieldType.Integer)
     private int userId;
+
+    @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String title;
+
+    @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String content;
+
+    @Field(type = FieldType.Integer)
     private int type; //帖子类型（普通、置顶）
+
+    @Field(type = FieldType.Integer)
     private int status; //帖子状态（正常、精华、拉黑）
+
+    @Field(type = FieldType.Date)
     private Date createTime;
+
+    @Field(type = FieldType.Integer)
     private int commentCount;
+
+    @Field(type = FieldType.Double)
     private double score;
 
     public DiscussPost(int userId, String title, String content, int type, int status, Date createTime, int commentCount, double score) {

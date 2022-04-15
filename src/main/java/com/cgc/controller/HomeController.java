@@ -59,8 +59,10 @@ public class HomeController {
             }
         }
         model.addAttribute("discussPosts", discussPosts);
-        model.addAttribute("messageCount", messageService.findUnReadNoticeCount(user.getId(), null)
-                + messageService.findUnreadMessagesCount(user.getId(), null));
+        if (messageService != null && user != null) {
+            model.addAttribute("messageCount", messageService.findUnReadNoticeCount(user.getId(), null)
+                    + messageService.findUnreadMessagesCount(user.getId(), null));
+        }
         return "index";
     }
 
