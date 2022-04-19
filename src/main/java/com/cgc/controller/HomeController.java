@@ -37,6 +37,8 @@ public class HomeController {
     @Autowired
     private HostHolder hostHolder;
 
+
+
     @RequestMapping({"/index", "/"})
     public String getIndexPage(Model model, Page page) {
         User user = hostHolder.getUser();
@@ -53,6 +55,8 @@ public class HomeController {
                 Map<String, Object> map = new HashMap<String, Object>();
                 map.put("post", discussPost);
                 map.put("user", userService.findUserById(discussPost.getUserId()));
+                System.out.println("userid:"+discussPost.getUserId());
+                System.out.println("user:"+userService.findUserById(discussPost.getUserId()));
                 map.put("likeCount", likeService.findEntityLikeCount(1, discussPost.getId()));
                 map.put("commentCount", discussPostService.updateCommentCount(discussPost.getId()));
                 discussPosts.add(map);

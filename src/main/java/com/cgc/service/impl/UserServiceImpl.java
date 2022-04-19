@@ -111,7 +111,7 @@ public class UserServiceImpl implements UserService, CommunityConstant {
         //注意这里面的user.getId(),因为我们没有为user对象的id属性赋值，所以显示的是默认值
         //mybatis提供了一个use-generated-keys属性，为true时，向数据库插入数据，在数据库中自动生成的主键值会被自动设置给
         //Java对象中与主键对应的属性，所以在插入时要在sql中指定主键对应的Java对象中的属性是哪一个（keyProperty=“id”）
-        String url = domain + path + "activation/" + user.getId() + "/" + user.getActivationCode();
+        String url = domain + path + "/activation/" + user.getId() + "/" + user.getActivationCode();
         context.setVariable("url", url);
         String content = templateEngine.process("/mail/activation.html", context);
 
